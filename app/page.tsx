@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-slate-950 text-white items-center p-16">
+    <main className="flex min-h-screen flex-col bg-black text-white items-center p-16">
       <div className="items-center justify-center lg:flex">
-        <Image src={'/logo1.png'} alt="Website Logo" width={400} height={100} />
+        <Image src={'/logo.png'} alt="Website Logo" width={400} height={100} />
       </div>
       <div className="flex flex-col items-center">
         <h1 className="text-center font-heading m-10 text-5xl sm:text-6xl lg:text-7xl leading-[5rem] sm:leading-[7rem] lg:leading-[7rem] font-bold">
