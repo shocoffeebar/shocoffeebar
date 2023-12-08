@@ -46,9 +46,9 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="my-4">
           <p className="text-center">
-            Questions? Email us at{' '}
+            Questions? <span className="pl-1">Email us at </span>
             <a
               href="mailto:info@shocoffeebar.ca"
               className="hover:text-white hover:underline"
