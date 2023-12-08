@@ -48,6 +48,17 @@ export default function Home() {
         </div>
         <div>
           <p className="text-center">
+            Questions? Email us at{' '}
+            <a
+              href="mailto:info@shocoffeebar.ca"
+              className="hover:text-white hover:underline"
+            >
+              info@shocoffeebar.ca
+            </a>
+          </p>
+        </div>
+        <div>
+          <p className="text-center">
             &copy; {new Date().getFullYear()} ShoCoffeeBar
           </p>
         </div>
