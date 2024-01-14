@@ -29,7 +29,7 @@ export default function Home() {
             <li className="px-2 capitalize">
               <a
                 target="_blank"
-                href="https://www.facebook.com/profile.php?id=61554805807107"
+                href="https://www.facebook.com/profile.php?id=61550963107645"
                 className="hover:text-white hover:underline"
               >
                 Facebook
