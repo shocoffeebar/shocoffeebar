@@ -12,14 +12,15 @@ interface MainNavProps {
 export function MainNav({ items }: MainNavProps) {
   return (
     <div className="hidden gap-6 md:flex md:gap-20">
-      <Link href="/">
+      {/* <Link href="/">
         <Image
           src={'/logo.png'}
           alt={siteConfig.name}
           width={200}
           height={50}
         />
-      </Link>
+      </Link> */}
+      <div className="text-xl text-white flex items-center">LOGO</div>
       {items?.length ? (
         <nav className="flex gap-24">
           {items?.map(

@@ -25,7 +25,7 @@ export function SiteFooter() {
           <div className="flex flex-col items-center gap-y-4">
             <h1 className="font-medium text-[20px]">LOCATION</h1>
             <Link
-              href="https://maps.app.goo.gl/gvwCax9UjwatVJVc6"
+              href="https://maps.app.goo.gl/AY7GfMG1UZ1PfoBo9"
               target="_blank"
               className="hover:underline hover:text-gray-400 transition-all duration-300 ease-in text-[18px] cursor-pointer"
             >
@@ -79,7 +79,7 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-row justify-between">
           <div className="flex items-center text-white font-medium text-lg">
-            <h1>&#169; Sho Coffee Bar</h1>
+            <h1>&#169; Sho Coffee & Bar</h1>
           </div>
           <div className="flex flex-row gap-x-2">
             <div className="bg-[#252525] flex items-center justify-center p-3 text-xl hover:bg-white group transition-all duration-300 ease-in">
