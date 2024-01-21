@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import { Quicksand } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import './globals.css';
 
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 
-const quickSand = Quicksand({
+const outfit = Outfit({
   subsets: ['latin-ext'],
 });
 
@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={quickSand.className}>
+      <body className={outfit.className}>
         <div className="relative flex min-h-screen flex-col">
           <SiteHeader />
           <div className="flex-1">{children}</div>

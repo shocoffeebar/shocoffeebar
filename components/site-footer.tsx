@@ -103,13 +103,6 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
-      {/* <button className="hover:bg-white text-black hover:text-gray-400 text-7xl group relative flex items-center justify-center p-4 transition-all duration-100">
-        <span className="mr-6">MENU</span>
-        <span className="w-[4.5rem] group-hover:w-[2.2rem] border-2 border-black inline-block text-4xl font-bold transition-transform transform origin-center group-hover:rotate-90 duration-400 group-hover:border-gray-400 mr-6 group-hover:-mr-[1.5rem] group-hover:mt-1.5"></span>
-        <span className="group-hover:-mr-6 transition-all duration-400">
-          &gt;
-        </span>
-      </button> */}
     </footer>
   );
 }
