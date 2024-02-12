@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { Quicksand } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import './globals.css';
 
-const quickSand = Quicksand({
+const quickSand = Outfit({
   subsets: ['latin-ext'],
 });
 
