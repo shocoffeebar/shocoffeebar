@@ -14,7 +14,7 @@ export default function Home() {
         </div>
         <div className="bg-white absolute flex top-3/4 left-[47%] -translate-x-1/2 -translate-y-1/2 pt-4 pb-40 px-4 text-wrap w-[40%] mt-40">
           <p className="text-black text-3xl font-semibold leading-relaxed">
-            We want to ensoure our guests reeive a high-
+            We want to ensoure our guests receive a high-
             <br />
             quality product in a space filled with our
             <br />
@@ -29,7 +29,7 @@ export default function Home() {
             Introducing Winnipeg&apos;s first-ever cofee revolution-a
             cutting-edge
             <br />
-            technique that seamslessly blends precision and artistry to extreact{' '}
+            technique that seamslessly blends precision and artistry to extract{' '}
             <br />
             unparalleled flavors and aromas, setting a new standard in
             craftsmanship.
@@ -106,7 +106,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-white text-black flex flex-row  mr-24">
+        {/* Upcoming Events */}
+        {/* <div className="bg-white text-black flex flex-row  mr-24">
           <div className="flex flex-col px-12 pt-12 pb-20">
             <h1 className="text-5xl font-[500] mb-6">UPCOMING EVENTS</h1>
             <div className="flex-row flex">
@@ -161,7 +162,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </main>
   );
