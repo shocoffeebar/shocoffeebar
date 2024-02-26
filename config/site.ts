@@ -8,10 +8,10 @@ export const siteConfig = {
       title: 'About',
       href: '/about',
     },
-    // {
-    //   title: 'Menu',
-    //   href: '/menu',
-    // },
+    {
+      title: 'Menu',
+      href: '/menu',
+    },
     {
       title: 'Contact',
       href: '/contact',

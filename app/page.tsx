@@ -1,168 +1,156 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-black text-white">
-      <div className="relative mb-32">
-        <div className="flex justify-start">
-          <Image src="/hero.png" alt="Hero" width={1400} height={923} />
+      <div className="flex flex-col relative w-[100vw] h-[100vh]">
+        <div className="z-10">
+          <Image
+            src="/logo-coffee-wide.jpg"
+            alt="Sho Coffee & Bar"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+          />
         </div>
-        <div className="absolute top-[38%] left-[65%] transform -translate-x-1/2 -translate-y-1/2 text-white text-6xl font-medium w-3/4">
-          <p className="text-shadow-md">
-            THE SHO COFFEE & BAR CREATES AN ATMOSPHERE.
-          </p>
-        </div>
-        <div className="bg-white absolute flex top-3/4 left-[47%] -translate-x-1/2 -translate-y-1/2 pt-4 pb-40 px-4 text-wrap w-[40%] mt-40">
-          <p className="text-black text-3xl font-semibold leading-relaxed">
-            We want to ensoure our guests receive a high-
-            <br />
-            quality product in a space filled with our
-            <br />
-            atmosphere.
+        <div className="relative flex flex-col items-start z-20 my-auto ml-24">
+          <h1 className="text-[48px] text-shadow">SHO COFFEE & BAR</h1>
+          <p className="text-[36px] text-shadow">
+            Is the first place in Winnipeg with European-quality coffee.
           </p>
         </div>
       </div>
-      <div className="relative mt-32">
-        <Image src={'/leftcoffee.png'} alt="Hero" width={460} height={642} />
-        <div className="absolute top-[38%] left-[57%] transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-medium w-3/4">
-          <p className="text-shadow-md">
-            Introducing Winnipeg&apos;s first-ever cofee revolution-a
-            cutting-edge
-            <br />
-            technique that seamslessly blends precision and artistry to extract{' '}
-            <br />
-            unparalleled flavors and aromas, setting a new standard in
-            craftsmanship.
-          </p>
-        </div>
-        <div className="absolute top-[70%] left-[60%]">
-          <Image src={'/rightcoffee.png'} alt="Hero" width={638} height={347} />
-        </div>
-      </div>
-      <div className="grid grid-cols-6 mt-24 mb-16">
-        <p className="text-2xl col-start-2 col-span-2">
-          Introducing a revolutionary coffee brewing method in Winnipeg, our
-          high-level and contemporary technique seamlessly combines precision
-          and artistry. Utilizing cutting-edge equipment and a meticulous
-          process, we have redefined the coffee experience by enhancing flavor
-          profiles and extracting nuanced aromas previously undiscovered in the
-          Winnipeg coffee scene. This groundbreaking approach not only elevates
-          the sensory journey of each cup but also establishes a new standard
-          for coffee craftsmanship in the city.
+      <div className="flex flex-col px-24 py-4">
+        <h2 className="text-[36px] p-2 font-[500]">Is it opened?</h2>
+        <p className="text-[28px] p-2 font-[300]">
+          Not yet. So get ready, coffee lovers! Our coffee shop will be opening
+          its doors in Spring 2024!
         </p>
+        <p className="text-[28px] p-2 font-[300]">
+          Also exiciting news! Our bar will also be joining the lineup soon.
+          Stay tuned for updates!
+        </p>
+        <p className="text-[28px] p-2 font-[300]">
+          Follow us on socials to stay tuned!
+        </p>
+        <div className="flex flex-row py-2 gap-x-6 text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="50px"
+            width="50px"
+            fill="#ffffff"
+            viewBox="0 0 448 512"
+            className="rounded-full p-2 bg-[#252525] hover:bg-[#888888] transition-all duration-200 ease-in cursor-pointer icon"
+          >
+            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="50px"
+            width="50px"
+            fill="#ffffff"
+            viewBox="0 0 448 512"
+            className="rounded-full p-2 bg-[#252525] hover:bg-[#888888] transition-all duration-200 ease-in cursor-pointer icon"
+          >
+            <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+          </svg>
+        </div>
+        <div className="flex flex-col">
+          <h2 className="text-[36px] font-[500] p-2">Briefly about Sho</h2>
+          <p className="text-[20px] font-[300] leading-[28px] p-2">
+            At our core, we prioritize understanding our clients needs above all
+            else. That&apos;s why we&apos;ve woven the essence of inquiry into
+            our brand. You might be curious about the significance of
+            &quot;Sho&quot; in our name. If you guessed it represents the
+            question &quot;what,&quot; you&apos;re absolutely correct! In our
+            logo, &quot;Sho&quot; embodies that sense of wonder. Now, you might
+            be wondering about the language behind our playful puzzle. Simply
+            put, &quot;Sho?&quot; is a friendly nod to Ukrainian slang for
+            &quot;
+            <span className="text-[#E4664F]">what</span>&quot; (translated as
+            &quot;Шо&quot;). So, <span className="text-[#E4664F]">sho</span>{' '}
+            will it be today? A comforting latte or a frothy cappuccino?
+          </p>
+          <img src="/blueprints.png" alt="blueprints" className="w-full" />
+        </div>
       </div>
-      <Image
-        src="/Menu.png"
-        alt="Hero"
-        width={0}
-        height={0}
-        sizes="100vw"
-        style={{ width: '100%', height: 'auto' }}
-      />
-      <div className="bg-white text-black flex flex-col justify-center items-center">
-        <div className="flex flex-col p-24 space-y-6">
-          <button className="hover:bg-white hover:text-gray-400 text-5xl font-[500] group relative flex items-center transition-all duration-100 mb-16 w-min">
-            <span className="mr-6">MENU</span>
-            <span className="w-[4.5rem] group-hover:w-[1rem] border-2 border-black inline-block transition-transform transform origin-center group-hover:rotate-90 duration-400 group-hover:border-gray-400 mr-6 group-hover:-mr-[0.8rem] group-hover:mt-1.5"></span>
-            <span className="group-hover:-mr-6 transition-all duration-400 ">
-              &gt;
-            </span>
-          </button>
-          <h1 className="text-5xl font-[500]">LOCATION</h1>
-          <iframe
-            style={{
-              filter: 'grayscale(100%) invert(92%) contrast(83%)',
-            }}
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2569.973073252939!2d-97.14240025788158!3d49.89930884451402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea717a0e0d24d5%3A0x1c0a921721de853b!2sSho%20coffee%20%26%20bar!5e0!3m2!1sen!2sca!4v1705862440247!5m2!1sen!2sca"
-            width="100%"
-            height="668"
-            aria-hidden="false"
-            loading="lazy"
-          ></iframe>
-          <div className="flex flex-row items-center gap-x-48 text-center">
-            <div className="flex flex-col space-y-2">
-              <h1 className="text-3xl font-[500]">HOURS</h1>
-              <p className="text-2xl font-[500]">
-                Cafe: <span className="font-[400] text-[18px]">7am - 9pm</span>
-              </p>
-              <p className="text-2xl font-[500]">
-                Bar: <span className="font-[400] text-[18px]">9pm - 2am</span>
-              </p>
-            </div>
-            <div className="flex flex-col">
-              <h1 className="text-3xl font-[500] mb-4">ADDRESS</h1>
-              <p className="text-2xl font-[500]">290 William Ave</p>
-              <p className="text-2xl font-[500]">Winnipeg</p>
-            </div>
-            <div className="flex flex-col">
-              <h1 className="text-3xl font-[500] mb-4">EMAIL</h1>
-              <p className="text-2xl font-[500]">info@shocoffeebar.com</p>
-              <br />
-            </div>
-            <div className="flex flex-col">
-              <h1 className="text-3xl font-[500] mb-4">PHONE</h1>
-              <p className="text-2xl font-[500]">+1 431 2777 777</p>
-              <br />
+      <div className="flex flex-row bg-white relative h-[50vh] shadow-xl">
+        <div className="z-10">
+          <Image
+            src="/white-clean-coffee - LS.jpg"
+            alt="white-clean-coffee"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+          />
+        </div>
+        <div className="relative z-20 ml-64 my-auto">
+          <img
+            src="/logo-full-black.svg"
+            alt="coffee-cup"
+            className="w-[389px] h-[166px]"
+          />
+        </div>
+      </div>
+      <div className="flex flex-col text-center py-[100px] px-[100px] bg-white text-black gap-y-[60px]">
+        <div className="flex flex-row items-center justify-around">
+          <div className="flex-col flex">
+            <h2 className="text-[28px] font-[300]">Contact</h2>
+            <Link
+              href="mailto:info@shocoffeebar.com"
+              className="text-[20px] font-[300] underline-hover hover:text-[#888888] cursor-pointer"
+            >
+              info@shocoffeebar.com
+            </Link>
+          </div>
+          <div className="flex-col">
+            <h2 className="text-[28px] font-[300]">Address</h2>
+            <Link
+              href="https://www.google.com/maps/place/Sho+coffee+%26+bar/@49.899342,-97.140843,16z/data=!4m6!3m5!1s0x52ea717a0e0d24d5:0x1c0a921721de853b!8m2!3d49.8993419!4d-97.140843!16s%2Fg%2F11vl49blv3?hl=en&entry=ttu"
+              target="_blank"
+              className="text-[20px] font-[300] underline-hover hover:text-[#888888] cursor-pointer"
+            >
+              290 William Ave, Winnipeg, MB
+            </Link>
+          </div>
+          <div className="flex-col">
+            <h2 className="text-[28px] font-[300]">Socials</h2>
+            <div className="flex flex-row py-2 gap-x-6 text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="50px"
+                width="50px"
+                fill="#ffffff"
+                viewBox="0 0 448 512"
+                className="rounded-full p-2 bg-[#252525] hover:bg-[#888888] transition-all duration-200 ease-in cursor-pointer icon"
+              >
+                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="50px"
+                width="50px"
+                fill="#ffffff"
+                viewBox="0 0 448 512"
+                className="rounded-full p-2 bg-[#252525] hover:bg-[#888888] transition-all duration-200 ease-in cursor-pointer icon"
+              >
+                <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+              </svg>
             </div>
           </div>
         </div>
-        {/* Upcoming Events */}
-        {/* <div className="bg-white text-black flex flex-row  mr-24">
-          <div className="flex flex-col px-12 pt-12 pb-20">
-            <h1 className="text-5xl font-[500] mb-6">UPCOMING EVENTS</h1>
-            <div className="flex-row flex">
-              <div className="flex border-b-2 border-black space-x-12 items-center p-6">
-                <div className="flex-flex-col items-center text-center text-3xl font-[500]">
-                  <p>FEB 25</p>
-                  <p>11 AM</p>
-                </div>
-                <div className="flex-flex-col items-center text-center">
-                  <p className="text-2xl font-[500]">Graceful opening</p>
-                </div>
-                <div className="flex-flex-col items-center text-center">
-                  <p className="text-xl font-[400]">
-                    Lorem ipsum dolor sit amet consectetur. Condimentum nullam
-                    quis elit eros sed leo cursus.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="flex-row flex">
-              <div className="flex border-b-2 border-black space-x-12 items-center p-6">
-                <div className="flex-flex-col items-center text-center text-3xl font-[500]">
-                  <p>FEB 25</p>
-                  <p>11 AM</p>
-                </div>
-                <div className="flex-flex-col items-center text-center">
-                  <p className="text-2xl font-[500]">Graceful opening</p>
-                </div>
-                <div className="flex-flex-col items-center text-center">
-                  <p className="text-xl font-[400]">
-                    Lorem ipsum dolor sit amet consectetur. Condimentum nullam
-                    quis elit eros sed leo cursus.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="flex-row flex">
-              <div className="flex border-b-2 border-black space-x-12 items-center p-6">
-                <div className="flex-flex-col items-center text-center text-3xl font-[500]">
-                  <p>FEB 25</p>
-                  <p>11 AM</p>
-                </div>
-                <div className="flex-flex-col items-center text-center">
-                  <p className="text-2xl font-[500]">Graceful opening</p>
-                </div>
-                <div className="flex-flex-col items-center text-center">
-                  <p className="text-xl font-[400]">
-                    Lorem ipsum dolor sit amet consectetur. Condimentum nullam
-                    quis elit eros sed leo cursus.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
+        <iframe
+          style={{
+            filter: 'grayscale(100%) invert(92%) contrast(83%)',
+          }}
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2569.973073252939!2d-97.14240025788158!3d49.89930884451402!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ea717a0e0d24d5%3A0x1c0a921721de853b!2sSho%20coffee%20%26%20bar!5e0!3m2!1sen!2sca!4v1705862440247!5m2!1sen!2sca"
+          width="100%"
+          height="350"
+          aria-hidden="false"
+          loading="lazy"
+          className=""
+        ></iframe>
       </div>
     </main>
   );

@@ -91,3 +91,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+.bg-hero-image {
+  background-image: url('/caramel-milk.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.icon:hover {
+  fill: #252525;
+}
+
+.underline-hover {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 300ms;
+}
+
+.underline-hover:hover {
+  border-bottom: 1px solid #888888;
+}

@@ -13,8 +13,14 @@ export function MainNav({ items }: MainNavProps) {
   return (
     <>
       {items?.length ? (
-        <nav className="w-full flex py-6 items-center">
-          <h1 className="text-3xl text-white">Logo</h1>
+        <nav className="w-full flex items-center">
+          <Link href="/">
+            <img
+              src="/logo-full.svg"
+              alt="Sho Coffee & Bar"
+              className="h-[100px] w-[100px]"
+            />
+          </Link>
           <ul className="list-none sm:flex hidden justify-center items-center flex-1 gap-24">
             {items?.map(
               (item, index) =>
