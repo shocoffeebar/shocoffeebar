@@ -1,7 +1,40 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { ImageCard } from '@/components/image-card';
+import useMeasure from 'react-use-measure';
+import { animate, useMotionValue } from 'framer-motion';
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Menu() {
+  const images = [
+    '/bag-of-beans.jpg',
+    '/everyone-drink-sho.jpg',
+    '/glass-of-latte.jpg',
+    '/Iced-latte.jpg',
+    '/latte-beans.jpg',
+  ];
+
+  let [ref, { width }] = useMeasure();
+  const xTranslation = useMotionValue(0);
+
+  useEffect(() => {
+    let controls;
+    let finalPosition = -width / 2 - 8;
+
+    controls = animate(xTranslation, [0, finalPosition], {
+      duration: 25,
+      repeat: Infinity,
+      repeatType: 'loop',
+      repeatDelay: 0,
+      ease: 'linear',
+    });
+
+    return controls.stop;
+  }, [xTranslation, width]);
+
   return (
     <main className="flex min-h-screen flex-col bg-black text-white">
       <div className="flex flex-col relative">
@@ -56,6 +89,15 @@ export default function Menu() {
             </Link>
           </div>
         </div>
+        <motion.div
+          className="z-30 flex gap-4"
+          ref={ref}
+          style={{ x: xTranslation }}
+        >
+          {[...images, ...images].map((image, index) => (
+            <ImageCard key={index} image={image} />
+          ))}
+        </motion.div>
       </div>
     </main>
   );

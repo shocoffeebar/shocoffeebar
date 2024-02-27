@@ -47,12 +47,7 @@ export default function About() {
       <div className="grid grid-cols-6 bg-white text-black items-center px-64 py-24">
         <h1 className="col-span-6 text-center text-[36px] font-[500]">Team</h1>
         <div className="col-span-2 flex justify-start">
-          <Image
-            src="/cup-of-beans.png"
-            alt="John Doe"
-            width={315}
-            height={449}
-          />
+          <Image src="/hryhoriia.jpg" alt="John Doe" width={315} height={449} />
         </div>
         <div className="col-span-2 flex justify-center">
           <h2 className="text-[36px] font-[500]">Hryhorii Alieksanov</h2>
@@ -109,20 +104,10 @@ export default function About() {
           <h2 className="text-[36px] font-[500]">Denys</h2>
         </div>
         <div className="col-span-2 flex justify-center">
-          <Image
-            src="/cup-of-beans.png"
-            alt="John Doe"
-            width={315}
-            height={449}
-          />
+          <Image src="/denysb.jpg" alt="John Doe" width={315} height={449} />
         </div>
         <div className="col-span-2 flex justify-start">
-          <Image
-            src="/cup-of-beans.png"
-            alt="John Doe"
-            width={315}
-            height={449}
-          />
+          <Image src="/serhiip.png" alt="John Doe" width={315} height={449} />
         </div>
         <div className="col-span-2 flex justify-center">
           <h2 className="text-[36px] font-[500]">Serhii Pashchenko</h2>
@@ -179,12 +164,7 @@ export default function About() {
           <h2 className="text-[36px] font-[500]">Max</h2>
         </div>
         <div className="col-span-2 flex justify-center">
-          <Image
-            src="/cup-of-beans.png"
-            alt="John Doe"
-            width={315}
-            height={449}
-          />
+          <Image src="/maxb.png" alt="John Doe" width={315} height={449} />
         </div>
       </div>
     </main>
