@@ -1,11 +1,16 @@
 'use client';
 
-import Link from 'next/link';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { AlertTriangle } from 'lucide-react';
 
 function ContactForm() {
+  const [phoneInput, setPhoneInput] = useState('');
+  const handleInput = (e: any) => {
+    const formattedPhoneNumber = formatPhoneNumber(e.target.value);
+    setPhoneInput(formattedPhoneNumber);
+  };
   const {
     register,
     handleSubmit,
@@ -14,6 +19,19 @@ function ContactForm() {
 
   function onSubmit(data: any) {
     console.log(data);
+  }
+
+  function formatPhoneNumber(value: string) {
+    if (!value) return value;
+    const phoneNumber = value.replace(/[^\d]/g, '');
+    const phoneNumberLength = phoneNumber.length;
+    if (phoneNumberLength < 4) return phoneNumber;
+    if (phoneNumberLength < 7)
+      return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
+    return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
+      3,
+      6
+    )}-${phoneNumber.slice(6, 10)}`;
   }
 
   return (
@@ -40,18 +58,22 @@ function ContactForm() {
               } focus:outline-none`}
               placeholder="Name*"
             />
-            <label className="absolute select-none cursor-text left-0 -top-3 text-sm  bg-inherit  mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all">
+            <label
+              htmlFor="name"
+              className="absolute select-none cursor-text left-0 -top-3 text-sm  bg-inherit  mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
+            >
               Name*
             </label>
           </div>
-          {/* <div className="relative bg-inherit group text-[18px] font-[600]">
+          <div className="relative bg-inherit group text-[18px] font-[600]">
             {errors.phone && (
               <AlertTriangle className="absolute z-20 top-1.5 right-[4%] h-[25px] w-[28px] text-[#FF4E4E]" />
             )}
             <input
               type="text"
               id="phone"
-              {...register('phone')}
+              {...register('phone', { onChange: (e) => handleInput(e) })}
+              value={phoneInput}
               className={`peer bg-[#252525]  h-10 w-[500px] text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] ${
                 errors.phone
                   ? 'focus:ring-[#FF4E4E] ring-[#FF4E4E]'
@@ -59,10 +81,13 @@ function ContactForm() {
               } focus:outline-none`}
               placeholder="Name*"
             />
-            <label className="absolute cursor-text left-0 -top-3 text-sm  bg-inherit  mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all">
+            <label
+              htmlFor="phone"
+              className="absolute cursor-text left-0 -top-3 text-sm  bg-inherit  mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
+            >
               Phone
             </label>
-          </div> */}
+          </div>
           <div className="relative bg-inherit group text-[18px] font-[600]">
             {errors.email && (
               <AlertTriangle className="absolute z-20 top-1.5 right-[4%] h-[25px] w-[28px] text-[#FF4E4E]" />
@@ -84,7 +109,10 @@ function ContactForm() {
               } focus:outline-none`}
               placeholder="Name*"
             />
-            <label className="absolute cursor-text left-0 -top-3 text-sm  bg-inherit  mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all">
+            <label
+              htmlFor="email"
+              className="absolute cursor-text left-0 -top-3 text-sm  bg-inherit  mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
+            >
               Email*
             </label>
           </div>
@@ -103,7 +131,10 @@ function ContactForm() {
               } focus:outline-none`}
               placeholder="Name*"
             />
-            <label className="absolute cursor-text left-0 -top-3 text-sm  bg-inherit  mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all">
+            <label
+              htmlFor="topic"
+              className="absolute cursor-text left-0 -top-3 text-sm  bg-inherit  mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
+            >
               Topic*
             </label>
           </div>
@@ -122,7 +153,10 @@ function ContactForm() {
               } focus:outline-none`}
               placeholder="Name*"
             />
-            <label className="absolute cursor-text left-0 -top-3 text-sm  bg-inherit  mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all">
+            <label
+              htmlFor="message"
+              className="absolute cursor-text left-0 -top-3 text-sm  bg-inherit  mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
+            >
               Message*
             </label>
           </div>
