@@ -47,12 +47,18 @@ export default function About() {
       <div className="grid grid-cols-6 bg-white text-black items-center px-64 py-24">
         <h1 className="col-span-6 text-center text-[36px] font-[500]">Team</h1>
         <div className="col-span-2 flex justify-start">
-          <Image src="/hryhoriia.jpg" alt="John Doe" width={315} height={449} />
+          <Image
+            src="/hryhoriia.jpg"
+            alt="John Doe"
+            width={315}
+            height={449}
+            className="shadow-xl shadow-black/25"
+          />
         </div>
-        <div className="col-span-2 flex justify-center">
-          <h2 className="text-[36px] font-[500]">Hryhorii Alieksanov</h2>
+        <div className="col-span-2 flex justify-end">
+          <h2 className="text-[28px] font-[300]">Hryhorii Alieksanov</h2>
         </div>
-        <div className="col-span-2 flex justify-center">
+        <div className="col-span-2 flex justify-end">
           <div className="flex flex-row py-2 gap-x-6 text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -101,18 +107,30 @@ export default function About() {
           </div>
         </div>
         <div className="col-span-2 flex justify-center">
-          <h2 className="text-[36px] font-[500]">Denys</h2>
+          <h2 className="text-[28px] font-[300]">Denys</h2>
         </div>
-        <div className="col-span-2 flex justify-center">
-          <Image src="/denysb.jpg" alt="John Doe" width={315} height={449} />
+        <div className="col-span-2 flex justify-end">
+          <Image
+            src="/denysb.jpg"
+            alt="John Doe"
+            width={315}
+            height={449}
+            className="shadow-xl shadow-black/25"
+          />
         </div>
         <div className="col-span-2 flex justify-start">
-          <Image src="/serhiip.png" alt="John Doe" width={315} height={449} />
+          <Image
+            src="/serhiip.png"
+            alt="John Doe"
+            width={315}
+            height={449}
+            className="shadow-xl shadow-black/25"
+          />
         </div>
-        <div className="col-span-2 flex justify-center">
-          <h2 className="text-[36px] font-[500]">Serhii Pashchenko</h2>
+        <div className="col-span-2 flex justify-end">
+          <h2 className="text-[28px] font-[300]">Serhii Pashchenko</h2>
         </div>
-        <div className="col-span-2 flex justify-center">
+        <div className="col-span-2 flex justify-end">
           <div className="flex flex-row py-2 gap-x-6 text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -161,10 +179,16 @@ export default function About() {
           </div>
         </div>
         <div className="col-span-2 flex justify-center">
-          <h2 className="text-[36px] font-[500]">Max</h2>
+          <h2 className="text-[28px] font-[300]">Max</h2>
         </div>
-        <div className="col-span-2 flex justify-center">
-          <Image src="/maxb.png" alt="John Doe" width={315} height={449} />
+        <div className="col-span-2 flex justify-end">
+          <Image
+            src="/maxb.png"
+            alt="John Doe"
+            width={315}
+            height={449}
+            className="shadow-xl shadow-black/25"
+          />
         </div>
       </div>
     </main>

@@ -8,11 +8,6 @@ export function SiteFooter() {
   return (
     <footer className="bg-[#252525] flex flex-col px-24 py-12">
       <div className="flex flex-col text-center px-[100px] text-white">
-        <img
-          src={'/logo-full.svg'}
-          alt={siteConfig.name}
-          className="h-[100px] w-[100px]"
-        />
         <div className="flex flex-row items-center justify-around mb-12">
           <div className="flex-col flex">
             <h2 className="text-[28px] font-[300]">Contact</h2>
@@ -33,9 +28,9 @@ export function SiteFooter() {
               290 William Ave, Winnipeg, MB
             </Link>
           </div>
-          <div className="flex-col">
+          <div className="flex flex-col mt-6">
             <h2 className="text-[28px] font-[300]">Socials</h2>
-            <div className="flex flex-row py-2 gap-x-6 text-white">
+            <div className="flex flex-row text-white">
               <Link
                 href="https://www.instagram.com/shocoffeebar/"
                 target="_blank"

@@ -5,16 +5,16 @@ import Link from 'next/link';
 
 export default function Menu() {
   return (
-    <main className="flex min-h-screen flex-col bg-black text-white">
+    <main className="flex flex-col bg-black text-white">
       <div className="flex flex-col relative">
         <div className="z-10">
           <img
             src="/beans.png"
             alt="Sho Coffee & Bar"
-            className="z-10 h-[550px] w-[548px] absolute top-0 -left-60"
+            className="z-10 h-[550px] w-[548px] absolute top-0 -left-20"
           />
         </div>
-        <div className="relative flex flex-col px-32 py-4 z-20">
+        <div className="relative flex flex-col p-40 z-20 ">
           <h2 className="text-[48px] p-2 font-[500]">
             SORRY MENU ISN&apos;T READY YET
           </h2>
@@ -58,7 +58,6 @@ export default function Menu() {
             </Link>
           </div>
         </div>
-        <ImageSlider />
       </div>
     </main>
   );
