@@ -3,8 +3,8 @@ import { MainNav } from './main-nav';
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-white bg-black">
-      <div className="container flex h-[80px] items-center space-x-4 sm:justify-between sm:space-x-0">
+    <header className="sticky top-0 z-40 bg-black">
+      <div className="container flex h-[70px] items-center sm:justify-between sm:space-x-0">
         <MainNav items={siteConfig.mainNav} />
       </div>
     </header>

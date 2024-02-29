@@ -20,7 +20,7 @@ export default function About() {
           </h1>
         </div>
       </div>
-      <div className="flex flex-col px-24 pt-4 pb-12">
+      <div className="flex flex-col px-24 py-16">
         <h2 className="text-[36px] p-2 font-[500]">What is SHO?</h2>
         <p className="text-[20px] p-2 font-[300]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa

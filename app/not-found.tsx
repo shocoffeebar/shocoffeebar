@@ -14,8 +14,10 @@ export default function NotFound() {
           />
         </div>
         <div className="relative flex flex-col p-48 z-20 ">
-          <h2 className="text-[48px] p-2 font-[500]">404 ERROR</h2>
-          <p className="text-[20px] p-2 font-[300]">
+          <h2 className="text-[48px] p-2 font-[500]">
+            <span className="font-year">404</span> ERROR
+          </h2>
+          <p className="text-[28px] p-2 font-[300]">
             Sorry, something went wrong
           </p>
         </div>

@@ -6,11 +6,11 @@ import { FacebookIcon, InstagramIcon } from 'lucide-react';
 
 export function SiteFooter() {
   return (
-    <footer className="bg-[#252525] flex flex-col px-24 py-12">
+    <footer className="bg-[#252525] flex flex-col px-24 py-16">
       <div className="flex flex-col text-center px-[100px] text-white">
         <div className="flex flex-row items-center justify-around mb-12">
-          <div className="flex-col flex">
-            <h2 className="text-[28px] font-[300]">Contact</h2>
+          <div className="flex-col flex gap-y-4">
+            <h2 className="text-[36px] font-[500]">Email</h2>
             <Link
               href="mailto:info@shocoffeebar.com"
               className="text-[20px] font-[300] underline-hover hover:text-[#888888] cursor-pointer"
@@ -18,8 +18,8 @@ export function SiteFooter() {
               info@shocoffeebar.com
             </Link>
           </div>
-          <div className="flex-col">
-            <h2 className="text-[28px] font-[300]">Address</h2>
+          <div className="flex-col flex gap-y-4">
+            <h2 className="text-[36px] font-[500]">Address</h2>
             <Link
               href="https://www.google.com/maps/place/Sho+coffee+%26+bar/@49.899342,-97.140843,16z/data=!4m6!3m5!1s0x52ea717a0e0d24d5:0x1c0a921721de853b!8m2!3d49.8993419!4d-97.140843!16s%2Fg%2F11vl49blv3?hl=en&entry=ttu"
               target="_blank"
@@ -28,8 +28,8 @@ export function SiteFooter() {
               290 William Ave, Winnipeg, MB
             </Link>
           </div>
-          <div className="flex flex-col mt-6">
-            <h2 className="text-[28px] font-[300]">Socials</h2>
+          <div className="flex-col flex gap-y-4 mt-6">
+            <h2 className="text-[36px] font-[500]">Socials</h2>
             <div className="flex flex-row text-white">
               <Link
                 href="https://www.instagram.com/shocoffeebar/"
@@ -83,7 +83,7 @@ export function SiteFooter() {
           >
             Trademarks
           </Link>
-          <div className="flex flex-row gap-x-2">
+          <div className="flex flex-row gap-x-2 font-[400]">
             <div className="bg-[#252525] flex items-center justify-center p-3 text-xl hover:bg-white group transition-all duration-300 ease-in">
               <span className="font-bold text-white group-hover:text-black transition-all duration-500  mr-4 group-hover:mr-2">
                 Designed
@@ -105,7 +105,9 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="flex items-center justify-center text-white font-medium text-lg">
-          <h1>&#169; 2024 Sho Coffee & Bar</h1>
+          <h1>
+            &#169; <span className="font-year">2024</span> Sho Coffee & Bar
+          </h1>
         </div>
       </div>
     </footer>
