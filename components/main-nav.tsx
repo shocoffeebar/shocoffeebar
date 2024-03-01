@@ -20,7 +20,7 @@ export function MainNav({ items }: MainNavProps) {
   return (
     <>
       {items?.length ? (
-        <nav className="w-full flex items-center">
+        <nav className="w-full items-center md:flex hidden">
           <Link href="/" onMouseEnter={handleHover} onMouseLeave={handleHover}>
             <svg
               width="100"
