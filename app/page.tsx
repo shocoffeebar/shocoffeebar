@@ -26,7 +26,7 @@ export default function Home() {
             objectPosition="center"
           />
         </div>
-        <div className="relative flex flex-col items-start z-20 md:my-auto md:ml-32 mt-32 md:mt-0 ml-6">
+        <div className="relative flex flex-col items-start z-20 md:my-auto md:ml-32 mt-32 ml-6">
           <h1 className="text-[28px] md:text-[48px] font-[500] text-shadow mb-2">
             SHO COFFEE & BAR
           </h1>
