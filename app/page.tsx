@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-black text-white">
       <div className="flex flex-col relative w-[100vw] h-[100vh]">
-        <div className="z-10">
+        <div className="z-10 md:block hidden">
           <Image
             src="/logo-coffee-wide.jpg"
             alt="Sho Coffee & Bar"
@@ -17,19 +17,30 @@ export default function Home() {
             objectPosition="center"
           />
         </div>
-        <div className="relative flex flex-col items-start z-20 my-auto ml-32">
-          <h1 className="text-[48px] font-[500] text-shadow">
+        <div className="z-10 md:hidden block">
+          <Image
+            src="/coffee.png"
+            alt="Sho Coffee & Bar"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+          />
+        </div>
+        <div className="relative flex flex-col items-start z-20 md:my-auto md:ml-32 mt-32 md:mt-0 ml-6">
+          <h1 className="text-[28px] md:text-[48px] font-[500] text-shadow mb-2">
             SHO COFFEE & BAR
           </h1>
-          <p className="text-[36px] text-shadow font-[500]">
+          <p className="text-[18px] md:text-[36px] text-shadow font-[500] md:leading-0 leading-8">
             Is the first place in Winnipeg with European-quality coffee.
           </p>
         </div>
       </div>
-      <div className="flex flex-col px-24 py-12 tracking-wide">
+      <div className="flex flex-col md:px-24 md:py-12 tracking-wide">
         <div className="flex flex-col py-8">
-          <h2 className="text-[42px] font-[500] p-2">Briefly about Sho</h2>
-          <p className="text-[28px] font-[300] leading-[40px] p-2">
+          <h2 className="text-[20px] md:text-[42px] font-[500] p-2">
+            Briefly about Sho
+          </h2>
+          <p className="text-[16px] md:text-[28px] font-[300] md:leading-[40px] p-2">
             At our core, we prioritize understanding our clients needs above all
             else. That&apos;s why we&apos;ve woven the essence of inquiry into
             our brand. You might be curious about the significance of
@@ -48,20 +59,21 @@ export default function Home() {
       <div className="flex flex-row bg-white relative h-[50vh] shadow-xl">
         <div className="z-10">
           <Image
-            src="/white-clean-coffee - LS.jpg"
+            src="/white-clean-coffee.jpg"
             alt="white-clean-coffee"
             layout="fill"
             objectFit="cover"
             objectPosition="center"
           />
         </div>
-        <div className="relative z-20 ml-64 my-auto">
+        <div className="relative z-20 md:ml-64 ml-12 my-auto">
           <svg
             width="389"
             height="166"
             viewBox="0 0 1830 780"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            className="w-[211px] h-[90px] md:w-[389px] md:h-[166px]"
           >
             <path
               fill-rule="evenodd"
@@ -140,22 +152,26 @@ export default function Home() {
           </svg>
         </div>
       </div>
-      <div className="flex flex-col text-black bg-white px-24 py-16 tracking-wide">
-        <h2 className="text-[36px] p-2 font-[500]">Is it opened?</h2>
-        <p className="text-[32px] p-2 font-[300]">
+      <div className="flex flex-col text-black bg-white md:px-24 md:py-16 leading-[36px] md:tracking-wide p-2 md:p-0">
+        <h2 className="text-[20px] md:text-[36px] md:p-2 font-[500]">
+          Is it opened?
+        </h2>
+        <p className="text-[18px] md:text-[32px] md:p-2 font-[300]">
           Not yet. So get ready, coffee lovers! Our coffee shop will be opening
           its doors in Spring 2024!
         </p>
-        <p className="text-[32px] p-2 font-[300]">
+        <p className="text-[18px] md:text-[32px] md:p-2 font-[300]">
           Also exiciting news! Our bar will also be joining the lineup soon.
           Stay tuned for updates!
         </p>
-        <p className="text-[32px] p-2 font-[300]">
+        <p className="text-[18px] md:text-[32px] md:p-2 font-[300]">
           Follow us on socials to stay tuned!
         </p>
       </div>
-      <div className="flex flex-col pb-12 px-[100px] bg-white text-black">
-        <h1 className="text-[36px] font-[500] pb-6">You will find us here</h1>
+      <div className="flex flex-col pb-12 md:px-[100px] bg-white text-black">
+        <h1 className="text-[20px] md:text-[36px] p-2 md:p-0 font-[500] md:pb-6">
+          You will find us here
+        </h1>
         <iframe
           style={{
             filter: 'grayscale(100%) invert(92%) contrast(83%)',

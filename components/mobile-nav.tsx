@@ -170,6 +170,7 @@ export function MobileNav({ items }: MainNavProps) {
                       key={index}
                       href={item.href}
                       className="bg-[#252525] border-2 border-[#888888] p-[30px] text-[#888888] text-[20px] font-[500] w-full flex justify-center"
+                      onClick={handleOpen}
                     >
                       {item.title.toUpperCase()}
                     </Link>
