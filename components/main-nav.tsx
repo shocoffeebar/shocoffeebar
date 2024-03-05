@@ -30,21 +30,21 @@ export function MainNav({ items }: MainNavProps) {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 clip-rule="evenodd"
                 d="M1515 690C1515 706.569 1528.43 720 1545 720C1561.57 720 1575 706.569 1575 690C1575 673.431 1561.57 660 1545 660C1528.43 660 1515 673.431 1515 690ZM1545 600C1495.29 600 1455 640.294 1455 690C1455 739.706 1495.29 780 1545 780C1594.71 780 1635 739.706 1635 690C1635 640.294 1594.71 600 1545 600Z"
                 fill={isHovered ? '#888888' : 'white'}
                 className="transition-all duration-200 ease-in cursor-pointer"
               />
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 clip-rule="evenodd"
                 d="M1545 510C1669.26 510 1770 409.264 1770 285C1770 160.736 1669.26 60 1545 60C1420.74 60 1320 160.736 1320 285C1320 409.264 1420.74 510 1545 510ZM1545 570C1702.4 570 1830 442.401 1830 285C1830 127.599 1702.4 0 1545 0C1387.6 0 1260 127.599 1260 285C1260 442.401 1387.6 570 1545 570Z"
                 fill={isHovered ? '#888888' : 'white'}
                 className="transition-all duration-200 ease-in cursor-pointer"
               />
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 clip-rule="evenodd"
                 d="M1545 150C1470.44 150 1410 210.442 1410 285H1350C1350 177.304 1437.3 90 1545 90C1652.7 90 1740 177.304 1740 285C1740 392.696 1652.7 480 1545 480V420C1619.56 420 1680 359.558 1680 285C1680 210.442 1619.56 150 1545 150Z"
                 fill={isHovered ? '#888888' : 'white'}
@@ -58,7 +58,7 @@ export function MainNav({ items }: MainNavProps) {
                 className="transition-all duration-200 ease-in cursor-pointer"
               />
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 clip-rule="evenodd"
                 d="M780 0H720V570H780V360H1050V570H1110V0H1050V210L780 210V0ZM1050 300V270H780V300H1050Z"
                 fill={isHovered ? '#888888' : 'white'}

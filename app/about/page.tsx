@@ -7,14 +7,14 @@ export default function About() {
       <div className="flex flex-col relative w-[100vw] h-[100vh]">
         <div className="z-10">
           <Image
-            src="/white-cup-black-lid-white-bg-front-wide.jpg"
+            src="/about-hero.png"
             alt="Sho Coffee & Bar"
             layout="fill"
             objectFit="cover"
             objectPosition="center"
           />
         </div>
-        <div className="relative flex flex-col items-start z-20 my-auto ml-24">
+        <div className="relative flex flex-col items-start z-20 my-auto ml-64">
           <h1 className="text-[48px] text-shadow text-black font-[500]">
             SHO ISN&apos;T JUST COFFEE
           </h1>
@@ -118,9 +118,9 @@ export default function About() {
         <div className="flex flex-col items-center justify-center  gap-y-4">
           <div className="col-span-2 flex justify-start">
             <Image
-              src="/serhiip.png"
+              src="/serhii.png"
               alt="Serhii"
-              width={330}
+              width={315}
               height={449}
               className="shadow-xl shadow-black/25"
             />
@@ -153,7 +153,7 @@ export default function About() {
         <div className="flex flex-col items-center justify-center col-span-1 col-start-2  gap-y-4">
           <div className="flex justify-start">
             <Image
-              src="/maxb.png"
+              src="/max.png"
               alt="John Doe"
               width={315}
               height={449}

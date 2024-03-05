@@ -162,7 +162,7 @@ export function MobileNav({ items }: MainNavProps) {
       </button>
       {items?.length
         ? isOpen && (
-            <div className="bg-[#101010] h-screen w-screen absolute top-[4.5rem] group-focus:top-0 right-0 duration-150 flex flex-col space-y-12 pt-16 items-center text-center">
+            <div className="bg-[#101010] h-screen w-screen absolute top-[4.5rem] group-focus:top-0 right-0 duration-150 flex flex-col space-y-8 pt-8 pb-12 items-center text-center">
               {items?.map(
                 (item, index) =>
                   item.href && (
