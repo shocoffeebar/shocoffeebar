@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { AlertTriangle } from 'lucide-react';
+import { resendEmail, sendEmail } from '@/lib/utils';
 
 function ContactForm() {
   const [phoneInput, setPhoneInput] = useState('');
@@ -17,8 +18,10 @@ function ContactForm() {
     formState: { errors },
   } = useForm();
 
-  function onSubmit(data: any) {
+  async function onSubmit(data: any) {
     console.log(data);
+    sendEmail(data);
+    resendEmail(data);
   }
 
   function formatPhoneNumber(value: string) {
@@ -122,20 +125,20 @@ function ContactForm() {
             )}
             <input
               type="text"
-              id="topic"
-              {...register('topic', { required: true })}
+              id="subject"
+              {...register('subject', { required: true })}
               className={`peer bg-[#252525]  h-10 w-[500px] text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] ${
                 errors.topic
                   ? 'focus:ring-[#FF4E4E] ring-[#FF4E4E]'
                   : 'focus:ring-[#E4664F] ring-[#888888]'
               } focus:outline-none`}
-              placeholder="Name*"
+              placeholder="Subject*"
             />
             <label
-              htmlFor="topic"
+              htmlFor="subject"
               className="absolute cursor-text left-0 -top-3 text-sm  bg-inherit  mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
             >
-              Topic*
+              Subject*
             </label>
           </div>
           <div className="relative bg-inherit group text-[18px] font-[600]">
@@ -161,7 +164,7 @@ function ContactForm() {
             </label>
           </div>
           <Button
-            className="bg-black text-white text-[18px] font-[600] hover:bg-white hover:text-black border-2 border-[#888888] rounded-none"
+            className="w-[500px] bg-black text-white text-[18px] font-[600] hover:bg-white hover:text-black border-2 border-[#888888] rounded-none"
             type="submit"
           >
             Send
