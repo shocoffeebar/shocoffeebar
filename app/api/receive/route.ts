@@ -5,7 +5,9 @@ import Mail from 'nodemailer/lib/mailer';
 export async function POST(req: NextRequest) {
   const body = await req.json();
 
-  const { name, email, phone, subject, message } = body;
+  const { name, email, phone, subject, message, type, resume } = body;
+
+  console.log(body);
 
   const transport = nodemailer.createTransport({
     host: 'shocoffeebar.ca',
@@ -20,8 +22,16 @@ export async function POST(req: NextRequest) {
   const mailOptions: Mail.Options = {
     from: email,
     to: process.env.EMAIL_USER,
-    subject: subject,
+    subject: `${subject} - ${type}`,
     text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:${message}`,
+    attachments: resume
+      ? [
+          {
+            filename: resume[0].name,
+            content: resume[0],
+          },
+        ]
+      : [],
   };
 
   const sendMailPromise = () =>

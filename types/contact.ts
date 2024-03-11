@@ -4,4 +4,9 @@ export interface ContactEmailProps {
   phone?: string;
   subject: string;
   message: string;
+  type?: string;
 }
+
+export interface FeedBackEmailProps {}
+
+export interface JoinTeamEmailProps {}

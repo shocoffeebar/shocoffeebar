@@ -7,8 +7,6 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function sendEmail(data: ContactEmailProps) {
-  console.log(data);
-
   fetch('/api/receive', {
     method: 'POST',
     headers: {
@@ -31,7 +29,6 @@ export async function resendEmail(data: ContactEmailProps) {
       body: JSON.stringify(data),
     });
     const res = await response.json();
-    console.log(res);
   } catch (error) {
     console.error(error);
   }

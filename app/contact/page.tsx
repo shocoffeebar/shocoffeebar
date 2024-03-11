@@ -19,7 +19,6 @@ function ContactForm() {
   } = useForm();
 
   async function onSubmit(data: any) {
-    console.log(data);
     sendEmail(data);
     resendEmail(data);
   }
@@ -163,6 +162,7 @@ function ContactForm() {
               Message*
             </label>
           </div>
+          <input type="hidden" {...register('type', { value: 'Contact' })} />
           <Button
             className="w-[500px] bg-black text-white text-[18px] font-[600] hover:bg-white hover:text-black border-2 border-[#888888] rounded-none"
             type="submit"
