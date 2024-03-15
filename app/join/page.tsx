@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { AlertTriangle } from 'lucide-react';
 import { resendEmail, sendEmail } from '@/lib/utils';
+import { useUploadThing, uploadFiles } from '@/lib/uploadthing';
 
 function JoinTeamForm() {
   const [phoneInput, setPhoneInput] = useState('');
@@ -19,8 +20,20 @@ function JoinTeamForm() {
     formState: { errors },
   } = useForm();
 
+  const uploadFile = async (data: any) => {
+    let files = [data];
+
+    const res = await uploadFiles('pdfUploader', {
+      files,
+    });
+    return res[0].url;
+  };
+
   async function onSubmit(data: any) {
-    console.log(data.resume[0]);
+    let resumeURL = await uploadFile(data.resume[0]);
+
+    data.resume = resumeURL;
+    console.log('data', data);
     sendEmail(data);
     // resendEmail(data);
   }
@@ -61,6 +74,7 @@ function JoinTeamForm() {
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex justify-center items-center w-full text-white"
+        encType="multipart/form-data"
       >
         <div className="bg-[#101010] space-y-6 w-1/2 items-center flex flex-col">
           <div className="relative bg-inherit group text-[18px] font-[600]">
