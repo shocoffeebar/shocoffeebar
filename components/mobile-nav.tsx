@@ -22,7 +22,7 @@ export function MobileNav({ items }: MainNavProps) {
 
   return (
     //Hambuger menu
-    <div className="flex flex-row justify-between sm:hidden mt-4">
+    <div className="flex-row justify-between flex sm:hidden mt-4">
       <Link href="/" onMouseEnter={handleHover} onMouseLeave={handleHover}>
         <svg
           width="100"

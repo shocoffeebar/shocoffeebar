@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Outfit, Roboto_Mono } from 'next/font/google';
-import '@uploadthing/react/styles.css';
 import './globals.css';
 
 import { SiteHeader } from '@/components/site-header';
