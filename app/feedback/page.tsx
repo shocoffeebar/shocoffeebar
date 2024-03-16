@@ -37,34 +37,27 @@ function FeedbackForm() {
   }
 
   return (
-    <div className="flex flex-row space-x-4 px-24 bg-[#101010]">
-      <div className="bg-white h-[620px] w-[32px]"></div>
-      <div className="bg-white h-[620px] w-[32px]"></div>
+    <div className="flex flex-row md:px-24 bg-[#101010]">
+      <div className="bg-white h-[620px] w-[32px] md:block hidden"></div>
+      <div className="bg-white h-[620px] w-[32px] md:block hidden"></div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex justify-center items-center w-full text-white"
+        className="flex md:justify-center md:items-center w-full text-white"
       >
-        <div className="bg-[#101010] space-y-6 w-1/2 items-center flex flex-col">
+        <div className="bg-[#101010] space-y-6 px-4 md:px-0 py-12 md:w-1/2 w-full md:items-center flex flex-col">
           <div className="relative bg-inherit group text-[18px] font-[600]">
-            {errors.name && (
-              <AlertTriangle className="absolute z-20 top-1.5 right-[4%] h-[25px] w-[28px] text-[#FF4E4E]" />
-            )}
             <input
               type="text"
               id="name"
-              {...register('name', { required: true })}
-              className={`peer bg-[#252525] h-10 w-[500px]  text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] ${
-                errors.name
-                  ? 'focus:ring-[#FF4E4E] ring-[#FF4E4E]'
-                  : 'focus:ring-[#E4664F] ring-[#888888]'
-              } focus:outline-none`}
-              placeholder="Name*"
+              {...register('name')}
+              className={`peer bg-[#252525] h-10 md:w-[500px] w-full text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] focus:outline-none`}
+              placeholder="Name"
             />
             <label
               htmlFor="name"
               className="absolute select-none cursor-text left-0 -top-3 text-sm peer-focus-within:bg-[#101010] mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
             >
-              Name*
+              Name
             </label>
           </div>
           <div className="relative bg-inherit group text-[18px] font-[600]">
@@ -76,7 +69,7 @@ function FeedbackForm() {
               id="phone"
               {...register('phone', { onChange: (e) => handleInput(e) })}
               value={phoneInput}
-              className={`peer bg-[#252525]  h-10 w-[500px] text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] ${
+              className={`peer bg-[#252525]  h-10 md:w-[500px] w-full text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] ${
                 errors.phone
                   ? 'focus:ring-[#FF4E4E] ring-[#FF4E4E]'
                   : 'focus:ring-[#E4664F] ring-[#888888]'
@@ -102,31 +95,32 @@ function FeedbackForm() {
                   matchPattern: (v) =>
                     /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v),
                 },
+                required: true,
               })}
-              className={`peer bg-[#252525]  h-10 w-[500px] text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] ${
+              className={`peer bg-[#252525]  h-10 md:w-[500px] w-full text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] ${
                 errors.email
                   ? 'focus:ring-[#FF4E4E] ring-[#FF4E4E]'
                   : 'focus:ring-[#E4664F] ring-[#888888]'
               } focus:outline-none`}
-              placeholder="Email"
+              placeholder="Email*"
             />
             <label
               htmlFor="email"
               className="absolute cursor-text left-0 -top-3 text-sm  peer-focus-within:bg-[#101010]   mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
             >
-              Email
+              Email*
             </label>
           </div>
           <div className="relative bg-inherit group text-[18px] font-[600]">
-            {errors.topic && (
+            {errors.subject && (
               <AlertTriangle className="absolute z-20 top-1.5 right-[4%] h-[25px] w-[28px] text-[#FF4E4E]" />
             )}
             <input
               type="text"
               id="subject"
               {...register('subject', { required: true })}
-              className={`peer bg-[#252525]  h-10 w-[500px] text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] ${
-                errors.topic
+              className={`peer bg-[#252525]  h-10 md:w-[500px] w-full text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] ${
+                errors.subject
                   ? 'focus:ring-[#FF4E4E] ring-[#FF4E4E]'
                   : 'focus:ring-[#E4664F] ring-[#888888]'
               } focus:outline-none`}
@@ -147,7 +141,7 @@ function FeedbackForm() {
               rows={5}
               id="message"
               {...register('message', { required: true })}
-              className={`peer bg-[#252525] w-[500px] text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] resize-none ${
+              className={`peer bg-[#252525] md:w-[500px] w-full text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] resize-none ${
                 errors.message
                   ? 'focus:ring-[#FF4E4E] ring-[#FF4E4E]'
                   : 'focus:ring-[#E4664F] ring-[#888888]'
@@ -163,15 +157,15 @@ function FeedbackForm() {
           </div>
           <input type="hidden" {...register('type', { value: 'Feedback' })} />
           <Button
-            className="w-[500px] bg-black text-white text-[18px] font-[600] hover:bg-white hover:text-black border-2 border-[#888888] rounded-none"
+            className="md:w-[500px] w-full bg-black text-white text-[18px] font-[600] hover:bg-white hover:text-black border-2 border-[#888888] rounded-none"
             type="submit"
           >
             Send
           </Button>
         </div>
       </form>
-      <div className="bg-white h-[620px] w-[32px]"></div>
-      <div className="bg-white h-[620px] w-[32px]"></div>
+      {/* <div className="bg-white h-[620px] w-[32px]"></div>
+      <div className="bg-white h-[620px] w-[32px]"></div> */}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function About() {
   return (
     <main className="flex min-h-screen flex-col bg-black text-white">
-      <div className="flex flex-col relative w-[100vw] h-[450px]">
+      <div className="flex flex-col relative w-[100vw] h-[600px]">
         <div className="z-10 md:block hidden">
           <Image
             src="/about-hero.png"
