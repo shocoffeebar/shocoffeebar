@@ -33,9 +33,8 @@ function JoinTeamForm() {
     let resumeURL = await uploadFile(data.resume[0]);
 
     data.resume = resumeURL;
-    console.log('data', data);
     sendEmail(data);
-    // resendEmail(data);
+    resendEmail(data);
   }
 
   function formatPhoneNumber(value: string) {
@@ -180,12 +179,6 @@ function JoinTeamForm() {
               }}
               className="hidden"
             />
-            {/* <label
-              htmlFor="resume"
-              className="absolute cursor-default left-0 -top-3 text-sm peer-focus-within:bg-[#101010] mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
-            >
-              Upload Your Resume*
-            </label> */}
           </div>
           <div className="relative bg-inherit group text-[18px] font-[600] md:z-0 z-10">
             {errors.message && (

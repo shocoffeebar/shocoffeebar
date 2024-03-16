@@ -7,7 +7,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export async function POST(req: NextRequest) {
   const body = await req.json();
 
-  const { name, email, phone, subject, message } = body;
+  const { name, email, phone, subject, message, type } = body;
   if (!name || !email || !subject || !message) {
     return NextResponse.json(
       { error: 'Missing required fields' },
@@ -20,7 +20,14 @@ export async function POST(req: NextRequest) {
       from: 'ShoCoffeeBar <info@shocoffeebar.ca>',
       to: [`${email}`],
       subject: `Thank you for contacting Sho Coffee Bar`,
-      react: ContactEmailTemplate({ name, email, phone, subject, message }),
+      react: ContactEmailTemplate({
+        name,
+        email,
+        phone,
+        subject,
+        message,
+        type,
+      }),
     });
 
     if (error) {
