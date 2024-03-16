@@ -5,7 +5,8 @@ import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { AlertTriangle } from 'lucide-react';
 import { resendEmail, sendEmail } from '@/lib/utils';
-import { useUploadThing, uploadFiles } from '@/lib/uploadthing';
+import { uploadFiles } from '@/lib/uploadthing';
+import { toast } from 'sonner';
 
 function JoinTeamForm() {
   const [phoneInput, setPhoneInput] = useState('');
@@ -33,6 +34,7 @@ function JoinTeamForm() {
     let resumeURL = await uploadFile(data.resume[0]);
 
     data.resume = resumeURL;
+    toast.success('Application sent!');
     sendEmail(data);
     resendEmail(data);
   }

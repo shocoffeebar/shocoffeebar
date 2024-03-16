@@ -23,8 +23,8 @@ export const ContactEmailTemplate = ({ name, type }: ContactEmailProps) => (
       <Container style={container}>
         <Img
           src={`https://utfs.io/f/1ee5ac26-f604-434a-bef9-ffdb7ee32016-worcxp.png`}
-          width="200"
-          height="200"
+          width="300"
+          height="150"
           alt="ShoCoffeeBar Logo"
           style={logo}
         />

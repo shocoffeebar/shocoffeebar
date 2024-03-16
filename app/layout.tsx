@@ -4,6 +4,7 @@ import './globals.css';
 
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
+import { Toaster } from 'sonner';
 
 const quickSand = Outfit({
   subsets: ['latin-ext'],
@@ -32,6 +33,7 @@ export default function RootLayout({
           <div className="flex-1">{children}</div>
           <SiteFooter />
         </div>
+        <Toaster richColors />
       </body>
     </html>
   );

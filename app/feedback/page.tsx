@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { AlertTriangle } from 'lucide-react';
 import { resendEmail, sendEmail } from '@/lib/utils';
+import { toast } from 'sonner';
 
 function FeedbackForm() {
   const [phoneInput, setPhoneInput] = useState('');
@@ -19,6 +20,9 @@ function FeedbackForm() {
   } = useForm();
 
   async function onSubmit(data: any) {
+    toast.success('Feedback sent successfully!', {
+      description: 'We appreciate your feedback!',
+    });
     sendEmail(data);
     resendEmail(data);
   }
