@@ -68,7 +68,7 @@ export default function About() {
               alt="John Doe"
               width={330}
               height={500}
-              className="shadow-xl shadow-black/25 hidden md:block"
+              className="shadow-xl shadow-black/25 hidden md:flex"
             />
 
             <Image
@@ -76,7 +76,7 @@ export default function About() {
               alt="John Doe"
               width={192}
               height={300}
-              className="shadow-xl shadow-black/25 md:hidden block"
+              className="shadow-xl shadow-black/25 md:hidden flex"
             />
           </div>
           <h2 className="text-[18px] md:text-[28px] font-[300]">Gregory</h2>
@@ -107,7 +107,7 @@ export default function About() {
               alt="John Doe"
               width={330}
               height={500}
-              className="shadow-xl shadow-black/25 hidden md:block"
+              className="shadow-xl shadow-black/25 hidden md:flex"
             />
 
             <Image
@@ -115,7 +115,7 @@ export default function About() {
               alt="John Doe"
               width={192}
               height={300}
-              className="shadow-xl shadow-black/25 md:hidden block"
+              className="shadow-xl shadow-black/25 md:hidden flex"
             />
           </div>
           <h2 className="text-[18px] md:text-[28px] font-[300]">Denys</h2>
@@ -145,7 +145,7 @@ export default function About() {
               alt="John Doe"
               width={330}
               height={500}
-              className="shadow-xl shadow-black/25 hidden md:block"
+              className="shadow-xl shadow-black/25 hidden md:flex"
             />
 
             <Image
@@ -153,7 +153,7 @@ export default function About() {
               alt="John Doe"
               width={192}
               height={300}
-              className="shadow-xl shadow-black/25 md:hidden block"
+              className="shadow-xl shadow-black/25 md:hidden flex"
             />
           </div>
           <h2 className="text-[18px] md:text-[28px] font-[300]">Serhii</h2>
@@ -184,7 +184,7 @@ export default function About() {
               alt="John Doe"
               width={330}
               height={500}
-              className="shadow-xl shadow-black/25 hidden md:block"
+              className="shadow-xl shadow-black/25 hidden md:flex"
             />
 
             <Image
@@ -192,7 +192,7 @@ export default function About() {
               alt="John Doe"
               width={192}
               height={300}
-              className="shadow-xl shadow-black/25 md:hidden block"
+              className="shadow-xl shadow-black/25 md:hidden flex"
             />
           </div>
           <h2 className="text-[18px] md:text-[28px] font-[300]">Max</h2>
