@@ -68,16 +68,16 @@ function JoinTeamForm() {
   });
 
   return (
-    <div className="flex flex-row space-x-4 px-24 bg-[#101010]">
-      <div className="bg-white h-[620px] w-[32px]"></div>
-      <div className="bg-white h-[620px] w-[32px]"></div>
+    <div className="flex flex-row md:px-24 bg-[#101010] relative">
+      <div className="bg-white h-[620px] w-[32px] md:block hidden mr-4"></div>
+      <div className="bg-white h-[620px] w-[32px] md:block hidden"></div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex justify-center items-center w-full text-white"
+        className="flex md:justify-center md:items-center w-full text-white"
         encType="multipart/form-data"
       >
-        <div className="bg-[#101010] space-y-6 w-1/2 items-center flex flex-col">
-          <div className="relative bg-inherit group text-[18px] font-[600]">
+        <div className="bg-[#101010] space-y-6 px-4 md:px-0 py-12 md:w-1/2 w-full md:items-center flex flex-col">
+          <div className="relative bg-inherit group text-[18px] font-[600] md:z-0 z-10">
             {errors.name && (
               <AlertTriangle className="absolute z-20 top-1.5 right-[4%] h-[25px] w-[28px] text-[#FF4E4E]" />
             )}
@@ -85,21 +85,21 @@ function JoinTeamForm() {
               type="text"
               id="name"
               {...register('name', { required: true })}
-              className={`peer bg-[#252525] h-10 w-[500px]  text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] ${
+              className={`peer bg-[#252525] h-10 md:w-[500px] w-full text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] focus:outline-none ${
                 errors.name
                   ? 'focus:ring-[#FF4E4E] ring-[#FF4E4E]'
                   : 'focus:ring-[#E4664F] ring-[#888888]'
-              } focus:outline-none`}
+              }`}
               placeholder="Name*"
             />
             <label
               htmlFor="name"
-              className="absolute select-none peer-focus-within:bg-[#101010] cursor-text left-0 -top-3 text-sm mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
+              className="absolute select-none cursor-text left-0 -top-3 text-sm peer-focus-within:bg-[#101010] mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
             >
               Name*
             </label>
           </div>
-          <div className="relative bg-inherit group text-[18px] font-[600]">
+          <div className="relative bg-inherit group text-[18px] font-[600] md:z-0 z-10">
             {errors.phone && (
               <AlertTriangle className="absolute z-20 top-1.5 right-[4%] h-[25px] w-[28px] text-[#FF4E4E]" />
             )}
@@ -111,7 +111,7 @@ function JoinTeamForm() {
                 onChange: (e) => handleInput(e),
               })}
               value={phoneInput}
-              className={`peer bg-[#252525]  h-10 w-[500px] text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] ${
+              className={`peer bg-[#252525]  h-10 md:w-[500px] w-full text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] ${
                 errors.phone
                   ? 'focus:ring-[#FF4E4E] ring-[#FF4E4E]'
                   : 'focus:ring-[#E4664F] ring-[#888888]'
@@ -120,12 +120,12 @@ function JoinTeamForm() {
             />
             <label
               htmlFor="phone"
-              className="absolute cursor-text left-0 peer-focus-within:bg-[#101010] -top-3 text-sm mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
+              className="absolute cursor-text left-0 -top-3 text-sm  peer-focus-within:bg-[#101010]   mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
             >
               Phone*
             </label>
           </div>
-          <div className="relative bg-inherit group text-[18px] font-[600]">
+          <div className="relative bg-inherit group text-[18px] font-[600] md:z-0 z-10">
             {errors.email && (
               <AlertTriangle className="absolute z-20 top-1.5 right-[4%] h-[25px] w-[28px] text-[#FF4E4E]" />
             )}
@@ -139,7 +139,7 @@ function JoinTeamForm() {
                     /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v),
                 },
               })}
-              className={`peer bg-[#252525]  h-10 w-[500px] text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] ${
+              className={`peer bg-[#252525]  h-10 md:w-[500px] w-full text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] ${
                 errors.email
                   ? 'focus:ring-[#FF4E4E] ring-[#FF4E4E]'
                   : 'focus:ring-[#E4664F] ring-[#888888]'
@@ -148,21 +148,21 @@ function JoinTeamForm() {
             />
             <label
               htmlFor="email"
-              className="absolute select-none cursor-text peer-focus-within:bg-[#101010] left-0 -top-3 text-sm mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
+              className="absolute cursor-text left-0 -top-3 text-sm  peer-focus-within:bg-[#101010]   mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
             >
               Email*
             </label>
           </div>
-          <div className="relative bg-inherit group text-[18px] font-[600]">
+          <div className="relative bg-inherit group text-[18px] font-[600] md:z-0 z-10">
             {errors.resume && (
               <AlertTriangle className="absolute z-20 top-1.5 right-[4%] h-[25px] w-[28px] text-[#FF4E4E]" />
             )}
             <button
               onClick={handleFileUploadClick}
               type="button"
-              className={`peer bg-[#252525] text-start h-10 w-[500px] text-base ${
+              className={`peer bg-[#252525] text-start h-10 w-full md:w-[500px] text-base  placeholder-transparent cursor-pointer  ring-2 px-2 ring-[#888888] ${
                 file ? 'text-white' : 'text-[#888888]'
-              } placeholder-transparent cursor-pointer  ring-2 px-2 ring-[#888888] ${
+              } ${
                 errors.resume
                   ? 'focus:ring-[#FF4E4E] ring-[#FF4E4E]'
                   : 'focus:ring-[#E4664F] ring-[#888888]'
@@ -187,7 +187,7 @@ function JoinTeamForm() {
               Upload Your Resume*
             </label> */}
           </div>
-          <div className="relative bg-inherit group text-[18px] font-[600]">
+          <div className="relative bg-inherit group text-[18px] font-[600] md:z-0 z-10">
             {errors.message && (
               <AlertTriangle className="absolute z-20 top-1.5 right-[4%] h-[25px] w-[28px] text-[#FF4E4E]" />
             )}
@@ -195,7 +195,7 @@ function JoinTeamForm() {
               rows={5}
               id="message"
               {...register('message', { required: true })}
-              className={`peer bg-[#252525] w-[500px] text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] resize-none ${
+              className={`peer bg-[#252525] md:w-[500px] w-full text-gray-200 placeholder-transparent ring-2 px-2 ring-[#888888] resize-none ${
                 errors.message
                   ? 'focus:ring-[#FF4E4E] ring-[#FF4E4E]'
                   : 'focus:ring-[#E4664F] ring-[#888888]'
@@ -204,7 +204,7 @@ function JoinTeamForm() {
             />
             <label
               htmlFor="message"
-              className="absolute cursor-text left-0 -top-3 text-sm peer-focus-within:bg-[#101010] mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
+              className="absolute cursor-text left-0 -top-3 text-sm  peer-focus-within:bg-[#101010]   mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#888888] peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-[#888888] peer-focus:text-sm transition-all"
             >
               Tell us briefly about yourself*
             </label>
@@ -215,15 +215,17 @@ function JoinTeamForm() {
           />
           <input type="hidden" {...register('type', { value: 'Join Team' })} />
           <Button
-            className="w-[500px] bg-black text-white text-[18px] font-[600] hover:bg-white hover:text-black border-2 border-[#888888] rounded-none"
+            className="md:w-[500px] w-full bg-black text-white text-[18px] font-[600] hover:bg-white hover:text-black border-2 border-[#888888] rounded-none md:z-0 z-10"
             type="submit"
           >
             Send
           </Button>
         </div>
       </form>
-      <div className="bg-white h-[620px] w-[32px]"></div>
-      <div className="bg-white h-[620px] w-[32px]"></div>
+      <div className="bg-white h-[620px] w-[32px] hidden md:block mr-4"></div>
+      <div className="bg-white h-[620px] w-[32px] hidden md:block"></div>
+      <div className="bg-white md:h-[620px] h-full w-[32px] md:hidden block absolute top-0 right-1"></div>
+      <div className="bg-white md:h-[620px] h-full w-[32px] md:hidden block absolute top-0 right-12"></div>
     </div>
   );
 }

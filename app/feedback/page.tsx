@@ -37,15 +37,15 @@ function FeedbackForm() {
   }
 
   return (
-    <div className="flex flex-row md:px-24 bg-[#101010]">
-      <div className="bg-white h-[620px] w-[32px] md:block hidden"></div>
+    <div className="flex flex-row md:px-24 bg-[#101010] relative">
+      <div className="bg-white h-[620px] w-[32px] md:block hidden mr-4"></div>
       <div className="bg-white h-[620px] w-[32px] md:block hidden"></div>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex md:justify-center md:items-center w-full text-white"
       >
         <div className="bg-[#101010] space-y-6 px-4 md:px-0 py-12 md:w-1/2 w-full md:items-center flex flex-col">
-          <div className="relative bg-inherit group text-[18px] font-[600]">
+          <div className="relative bg-inherit group text-[18px] font-[600] md:z-0 z-10">
             <input
               type="text"
               id="name"
@@ -60,7 +60,7 @@ function FeedbackForm() {
               Name
             </label>
           </div>
-          <div className="relative bg-inherit group text-[18px] font-[600]">
+          <div className="relative bg-inherit group text-[18px] font-[600] md:z-0 z-10">
             {errors.phone && (
               <AlertTriangle className="absolute z-20 top-1.5 right-[4%] h-[25px] w-[28px] text-[#FF4E4E]" />
             )}
@@ -83,7 +83,7 @@ function FeedbackForm() {
               Phone
             </label>
           </div>
-          <div className="relative bg-inherit group text-[18px] font-[600]">
+          <div className="relative bg-inherit group text-[18px] font-[600] md:z-0 z-10">
             {errors.email && (
               <AlertTriangle className="absolute z-20 top-1.5 right-[4%] h-[25px] w-[28px] text-[#FF4E4E]" />
             )}
@@ -111,7 +111,7 @@ function FeedbackForm() {
               Email*
             </label>
           </div>
-          <div className="relative bg-inherit group text-[18px] font-[600]">
+          <div className="relative bg-inherit group text-[18px] font-[600] md:z-0 z-10">
             {errors.subject && (
               <AlertTriangle className="absolute z-20 top-1.5 right-[4%] h-[25px] w-[28px] text-[#FF4E4E]" />
             )}
@@ -133,7 +133,7 @@ function FeedbackForm() {
               Subject*
             </label>
           </div>
-          <div className="relative bg-inherit group text-[18px] font-[600]">
+          <div className="relative bg-inherit group text-[18px] font-[600] md:z-0 z-10">
             {errors.message && (
               <AlertTriangle className="absolute z-20 top-1.5 right-[4%] h-[25px] w-[28px] text-[#FF4E4E]" />
             )}
@@ -157,15 +157,17 @@ function FeedbackForm() {
           </div>
           <input type="hidden" {...register('type', { value: 'Feedback' })} />
           <Button
-            className="md:w-[500px] w-full bg-black text-white text-[18px] font-[600] hover:bg-white hover:text-black border-2 border-[#888888] rounded-none"
+            className="md:w-[500px] w-full bg-black text-white text-[18px] font-[600] hover:bg-white hover:text-black border-2 border-[#888888] rounded-none md:z-0 z-10"
             type="submit"
           >
             Send
           </Button>
         </div>
       </form>
-      {/* <div className="bg-white h-[620px] w-[32px]"></div>
-      <div className="bg-white h-[620px] w-[32px]"></div> */}
+      <div className="bg-white h-[620px] w-[32px] hidden md:block mr-4"></div>
+      <div className="bg-white h-[620px] w-[32px] hidden md:block"></div>
+      <div className="bg-white md:h-[620px] h-full w-[32px] md:hidden block absolute top-0 right-1"></div>
+      <div className="bg-white md:h-[620px] h-full w-[32px] md:hidden block absolute top-0 right-12"></div>
     </div>
   );
 }
