@@ -6,7 +6,16 @@ const f = createUploadthing();
 // FileRouter for your app, can contain multiple FileRoutes
 export const ourFileRouter = {
   // Define as many FileRoutes as you like, each with a unique routeSlug
-  pdfUploader: f({ pdf: { maxFileSize: '4MB', maxFileCount: 1 } })
+  resumeUploader: f({
+    pdf: { maxFileSize: '4MB', maxFileCount: 1 },
+    text: { maxFileSize: '4MB', maxFileCount: 1 },
+    'text/csv': { maxFileSize: '4MB', maxFileCount: 1 },
+    'application/msword': { maxFileSize: '4MB', maxFileCount: 1 },
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document': {
+      maxFileSize: '4MB',
+      maxFileCount: 1,
+    },
+  })
     // Set permissions and file types for this FileRoute
     .onUploadComplete(async ({ metadata, file }) => {
       console.log('file url', file.url);
@@ -14,12 +23,6 @@ export const ourFileRouter = {
       // !!! Whatever is returned here is sent to the clientside `onClientUploadComplete` callback
       return { fileURL: file.url };
     }),
-  textUploader: f({
-    text: { maxFileSize: '4MB', maxFileCount: 1 },
-  }).onUploadComplete(async ({ metadata, file }) => {
-    console.log('file url', file.url);
-    return { fileURL: file.url };
-  }),
 } satisfies FileRouter;
 
 export type OurFileRouter = typeof ourFileRouter;

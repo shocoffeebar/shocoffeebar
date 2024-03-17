@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { AlertTriangle } from 'lucide-react';
@@ -11,6 +11,8 @@ import { toast } from 'sonner';
 function JoinTeamForm() {
   const [phoneInput, setPhoneInput] = useState('');
   const [file, setFile] = useState('');
+  const [resumeURL, setResumeURL] = useState('');
+  const [isSending, setIsSending] = useState(false);
   const handleInput = (e: any) => {
     const formattedPhoneNumber = formatPhoneNumber(e.target.value);
     setPhoneInput(formattedPhoneNumber);
@@ -24,14 +26,21 @@ function JoinTeamForm() {
   const uploadFile = async (data: any) => {
     let files = [data];
 
-    const res = await uploadFiles('pdfUploader', {
+    const res = await uploadFiles('resumeUploader', {
       files,
     });
     return res[0].url;
   };
 
   async function onSubmit(data: any) {
+    setIsSending(true);
     let resumeURL = await uploadFile(data.resume[0]);
+    setResumeURL(resumeURL);
+
+    if (!resumeURL) {
+      toast.error('Error uploading file');
+      return;
+    }
 
     data.resume = resumeURL;
     toast.success('Application sent!');
@@ -67,6 +76,10 @@ function JoinTeamForm() {
     required: true,
     onChange: handleFileUploadChange,
   });
+
+  useEffect(() => {
+    setIsSending(false);
+  }, [resumeURL]);
 
   return (
     <div className="flex flex-row md:px-24 bg-[#101010] relative">
@@ -169,7 +182,7 @@ function JoinTeamForm() {
                   : 'focus:ring-[#E4664F] ring-[#888888]'
               } focus:outline-none`}
             >
-              {file ? file : 'Upload Your Resume*'}
+              {file ? file : 'Upload Your Resume* (.pdf, .doc, .docx, .txt)'}
             </button>
             <input
               {...rest}
@@ -213,7 +226,11 @@ function JoinTeamForm() {
             className="md:w-[500px] w-full bg-black text-white text-[18px] font-[600] hover:bg-white hover:text-black border-2 border-[#888888] rounded-none md:z-0 z-10"
             type="submit"
           >
-            Send
+            {isSending ? (
+              <span className="h-8 w-8 animate-spin rounded-full border-b-2 border-white"></span>
+            ) : (
+              'Send'
+            )}
           </Button>
         </div>
       </form>
