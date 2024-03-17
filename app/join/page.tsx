@@ -192,6 +192,7 @@ function JoinTeamForm() {
                 ref(e);
                 hiddenFileInput.current = e;
               }}
+              accept=".pdf,.doc,.docx,.txt"
               className="hidden"
             />
           </div>
@@ -221,7 +222,10 @@ function JoinTeamForm() {
             type="hidden"
             {...register('subject', { value: 'ShoCoffeeBar Application' })}
           />
-          <input type="hidden" {...register('type', { value: 'Join Team' })} />
+          <input
+            type="hidden"
+            {...register('type', { value: 'Join the Team' })}
+          />
           <Button
             className="md:w-[500px] w-full bg-black text-white text-[18px] font-[600] hover:bg-white hover:text-black border-2 border-[#888888] rounded-none md:z-0 z-10"
             type="submit"

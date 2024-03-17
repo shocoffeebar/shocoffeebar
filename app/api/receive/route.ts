@@ -23,7 +23,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
     const mailOptions: Mail.Options = {
       from: email,
       to: process.env.EMAIL_USER,
-      subject: `${subject} - ${type}`,
+      subject: `${type === 'Join the Team' ? name : subject} - ${type}`,
       text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage: ${message} ${
         resume ? `\n\nResume: ${resume}` : ''
       }`,

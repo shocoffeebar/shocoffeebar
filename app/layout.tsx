@@ -18,6 +18,9 @@ const roboto = Roboto_Mono({
 export const metadata: Metadata = {
   title: 'Sho Coffee & Bar',
   description: 'The new home of coffee and cocktails in Winnipeg, Manitoba.',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
