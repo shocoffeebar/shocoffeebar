@@ -62,10 +62,10 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-row justify-center md:justify-between items-center mb-8 md:mb-12">
           <Link
-            href="/privacy-policy"
+            href="/policy"
             className="text-white hover:text-[#888888] underline-hover text-[14px] md:text-[18px] font-[400]"
           >
-            Privacy Policy
+            Policy
           </Link>
           <div className="flex-row gap-x-2 font-[400] md:flex hidden">
             <div className="bg-[#252525] flex items-center justify-center p-3 text-xl hover:bg-white group transition-all duration-300 ease-in">
