@@ -7,12 +7,14 @@ import { AlertTriangle } from 'lucide-react';
 import { resendEmail, sendEmail } from '@/lib/utils';
 import { uploadFiles } from '@/lib/uploadthing';
 import { toast } from 'sonner';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 function JoinTeamForm() {
   const [phoneInput, setPhoneInput] = useState('');
   const [file, setFile] = useState('');
   const [resumeURL, setResumeURL] = useState('');
   const [isSending, setIsSending] = useState(false);
+  const [captcha, setCaptcha] = useState<string | null>();
   const handleInput = (e: any) => {
     const formattedPhoneNumber = formatPhoneNumber(e.target.value);
     setPhoneInput(formattedPhoneNumber);
@@ -20,6 +22,7 @@ function JoinTeamForm() {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm();
 
@@ -39,6 +42,11 @@ function JoinTeamForm() {
 
     if (!resumeURL) {
       toast.error('Error uploading file');
+      return;
+    }
+
+    if (!captcha) {
+      toast.error('Please complete the captcha');
       return;
     }
 
@@ -76,6 +84,10 @@ function JoinTeamForm() {
     required: true,
     onChange: handleFileUploadChange,
   });
+
+  useEffect(() => {
+    register('captcha', { required: true });
+  }, [register]);
 
   useEffect(() => {
     setIsSending(false);
@@ -226,6 +238,15 @@ function JoinTeamForm() {
             type="hidden"
             {...register('type', { value: 'Join the Team' })}
           />
+          <ReCAPTCHA
+            sitekey={`${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+            onChange={(value) =>
+              setValue('captcha', value, { shouldValidate: true })
+            }
+          />
+          {errors.captcha && (
+            <h1 className="text-[#FF4E4E]">Please complete the captcha!</h1>
+          )}
           <Button
             className="md:w-[500px] w-full bg-black text-white text-[18px] font-[600] hover:bg-white hover:text-black border-2 border-[#888888] rounded-none md:z-0 z-10"
             type="submit"
