@@ -95,8 +95,8 @@ function JoinTeamForm() {
 
   return (
     <div className="flex flex-row md:px-24 bg-[#101010] relative">
-      <div className="bg-white h-[620px] w-[32px] md:block hidden mr-4"></div>
-      <div className="bg-white h-[620px] w-[32px] md:block hidden"></div>
+      <div className="bg-white h-[700px] w-[32px] md:block hidden mr-4"></div>
+      <div className="bg-white h-[700px] w-[32px] md:block hidden"></div>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex md:justify-center md:items-center w-full text-white"
@@ -259,10 +259,10 @@ function JoinTeamForm() {
           </Button>
         </div>
       </form>
-      <div className="bg-white h-[620px] w-[32px] hidden md:block mr-4"></div>
-      <div className="bg-white h-[620px] w-[32px] hidden md:block"></div>
-      <div className="bg-white md:h-[620px] h-full w-[32px] md:hidden block absolute top-0 right-1"></div>
-      <div className="bg-white md:h-[620px] h-full w-[32px] md:hidden block absolute top-0 right-12"></div>
+      <div className="bg-white h-[700px] w-[32px] hidden md:block mr-4"></div>
+      <div className="bg-white h-[700px] w-[32px] hidden md:block"></div>
+      <div className="bg-white md:h-[700px] h-full w-[32px] md:hidden block absolute top-0 right-1"></div>
+      <div className="bg-white md:h-[700px] h-full w-[32px] md:hidden block absolute top-0 right-12"></div>
     </div>
   );
 }
