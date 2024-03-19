@@ -48,8 +48,8 @@ export default function About() {
           makes you feel pampered and special. From the moment you set foot on
           the our place, our goal is to deliver on that sensation. <br /> <br />{' '}
           SHO Coffee & Bar transcends the ordinary coffee shop experience. It is
-          a culmination of our team's worldwide experience in a spectrum of
-          venues, from upscale to establishments recognized by Michelin.
+          a culmination of our team`&apos;`s worldwide experience in a spectrum
+          of venues, from upscale to establishments recognized by Michelin.
           Visitors will be treated to more than just coffee, they will immerse
           in a realm of emotions and ambiance, enhanced by advanced production
           techniques, utilizing unique tools and expertise not yet witnessed in
@@ -57,13 +57,12 @@ export default function About() {
           <br /> We aim not merely to reach a certain level of excellence but to
           share our knowledge with those keen on exploring the realms of coffee,
           mixology, and the art of Italian-Neapolitan signature dishes presented
-          in the style of Spanish tapas. <br />
-          <br /> Therefore, the operating principle will be divided into
-          Morning-Coffee, Evening-Mixology. The morning will feature an
-          atmosphere conducive to long hours of reading, with comfortable
-          seating and soothing background music. The evening will transition to
-          appropriate musical accompaniment, an interior color palette, and
-          interesting, atypical cocktails and food pairings. <br />
+          in the style of Spanish tapas. Therefore, the operating principle will
+          be divided into Morning-Coffee, Evening-Mixology. The morning will
+          feature an atmosphere conducive to long hours of reading, with
+          comfortable seating and soothing background music. The evening will
+          transition to appropriate musical accompaniment, an interior color
+          palette, and interesting, atypical cocktails and food pairings. <br />
           <br /> Our personal and primary goal as a company is not to be like
           everyone else. We want to show that anyone who is dedicated to their
           craft, works diligently, and strives for improvement while meeting the
