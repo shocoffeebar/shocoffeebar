@@ -14,7 +14,6 @@ function JoinTeamForm() {
   const [file, setFile] = useState('');
   const [resumeURL, setResumeURL] = useState('');
   const [isSending, setIsSending] = useState(false);
-  const [captcha, setCaptcha] = useState<string | null>();
   const handleInput = (e: any) => {
     const formattedPhoneNumber = formatPhoneNumber(e.target.value);
     setPhoneInput(formattedPhoneNumber);
@@ -42,11 +41,6 @@ function JoinTeamForm() {
 
     if (!resumeURL) {
       toast.error('Error uploading file');
-      return;
-    }
-
-    if (!captcha) {
-      toast.error('Please complete the captcha');
       return;
     }
 
