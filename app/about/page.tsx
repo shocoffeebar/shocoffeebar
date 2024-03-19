@@ -35,14 +35,43 @@ export default function About() {
           What is SHO?
         </h2>
         <p className="text-[16px] md:text-[20px] p-2 font-[300]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa
-          mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
-          mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
-          tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non
-          suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at
-          maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales
-          sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat
-          placerat. In iaculis arcu eros, eget tempus orci facilisis id.
+          We live and work in a rapidly changing world, a world in which
+          survival in our industry must be taken for granted. We must be
+          innovative, educated and advocate. We dedicate our efforts to increase
+          focusing on the coffee, this hospitality company plans to build
+          communities through the creation of one-of-a-kind guest experiences
+          across coffee & desserts , nightlife & mixology , and tapas-Italian &
+          European food concepts. SHO that is place that people not only want to
+          frequent but are willing to make an effort to go there, both in terms
+          of travel and in terms of getting dressed to make themselves feel good
+          and create a clear delineation between normalcy and something that
+          makes you feel pampered and special. From the moment you set foot on
+          the our place, our goal is to deliver on that sensation. <br /> <br />{' '}
+          SHO Coffee & Bar transcends the ordinary coffee shop experience. It is
+          a culmination of our team's worldwide experience in a spectrum of
+          venues, from upscale to establishments recognized by Michelin.
+          Visitors will be treated to more than just coffee, they will immerse
+          in a realm of emotions and ambiance, enhanced by advanced production
+          techniques, utilizing unique tools and expertise not yet witnessed in
+          Winnipeg. <br />
+          <br /> We aim not merely to reach a certain level of excellence but to
+          share our knowledge with those keen on exploring the realms of coffee,
+          mixology, and the art of Italian-Neapolitan signature dishes presented
+          in the style of Spanish tapas. <br />
+          <br /> Therefore, the operating principle will be divided into
+          Morning-Coffee, Evening-Mixology. The morning will feature an
+          atmosphere conducive to long hours of reading, with comfortable
+          seating and soothing background music. The evening will transition to
+          appropriate musical accompaniment, an interior color palette, and
+          interesting, atypical cocktails and food pairings. <br />
+          <br /> Our personal and primary goal as a company is not to be like
+          everyone else. We want to show that anyone who is dedicated to their
+          craft, works diligently, and strives for improvement while meeting the
+          desires of our guests will undoubtedly succeed. Because wherever there
+          is love for what you do, there will always be results. And we believe
+          in that. <br />
+          <br /> And finally, we extend our warmest wishes and invite all guests
+          to experience SHO Coffee & Bar with us. Thank you
         </p>
         <h2 className="text-[20px] md:text-[36px] p-2 font-[500]">
           About the team
