@@ -1,11 +1,12 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import { AlertTriangle } from 'lucide-react';
 import { resendEmail, sendEmail } from '@/lib/utils';
 import { toast } from 'sonner';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 function FeedbackForm() {
   const [phoneInput, setPhoneInput] = useState('');
@@ -16,6 +17,7 @@ function FeedbackForm() {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm();
 
@@ -39,6 +41,10 @@ function FeedbackForm() {
       6
     )}-${phoneNumber.slice(6, 10)}`;
   }
+
+  useEffect(() => {
+    register('captcha', { required: true });
+  }, [register]);
 
   return (
     <div className="flex flex-row md:px-24 bg-[#101010] relative">
@@ -160,6 +166,12 @@ function FeedbackForm() {
             </label>
           </div>
           <input type="hidden" {...register('type', { value: 'Feedback' })} />
+          <ReCAPTCHA
+            sitekey={`${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+            onChange={(value) =>
+              setValue('captcha', value, { shouldValidate: true })
+            }
+          />
           <Button
             className="md:w-[500px] w-full bg-black text-white text-[18px] font-[600] hover:bg-white hover:text-black border-2 border-[#888888] rounded-none md:z-0 z-10"
             type="submit"
