@@ -72,19 +72,6 @@ export default function About() {
           <br /> And finally, we extend our warmest wishes and invite all guests
           to experience SHO Coffee & Bar with us. Thank you
         </p>
-        <h2 className="text-[20px] md:text-[36px] p-2 font-[500]">
-          About the team
-        </h2>
-        <p className="text-[16px] md:text-[20px] p-2 font-[300]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa
-          mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
-          mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis
-          tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non
-          suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at
-          maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales
-          sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat
-          placerat. In iaculis arcu eros, eget tempus orci facilisis id.
-        </p>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 bg-white text-black items-center md:px-64 py-12 md:py-24 md:gap-y-12 gap-y-8">
         <h1 className="col-span-2 md:col-span-3 text-center text-[20px] md:text-[36px] font-[500]">

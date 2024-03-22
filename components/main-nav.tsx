@@ -19,7 +19,12 @@ export function MainNav({ items }: MainNavProps) {
 
   return (
     <div className="w-full items-center md:flex hidden">
-      <Link href="/" onMouseEnter={handleHover} onMouseLeave={handleHover}>
+      <Link
+        href="/"
+        onMouseEnter={handleHover}
+        onMouseLeave={handleHover}
+        className="lg:pl-32 pl-12"
+      >
         <svg
           width="100"
           height="40"
@@ -132,7 +137,7 @@ export function MainNav({ items }: MainNavProps) {
         </svg>
       </Link>
       {items?.length ? (
-        <nav className="list-none sm:flex hidden justify-center items-center flex-1 gap-20">
+        <nav className="list-none sm:flex hidden justify-center items-center flex-1 lg:gap-32">
           {items?.map(
             (item, index) =>
               item.href && (
