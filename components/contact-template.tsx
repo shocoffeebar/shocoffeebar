@@ -25,7 +25,7 @@ export const ContactEmailTemplate = ({ name, type }: ContactEmailProps) => (
           src={`https://utfs.io/f/2cf1e835-3290-4b09-b32e-324648d8bcc1-worcxp.png`}
           width="300"
           height="150"
-          alt="ShoCoffeeBar Logo"
+          alt="ShoCoffeeBarLogo"
           style={logo}
         />
         <Text style={paragraph}>Hi {name},</Text>
