@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.svg',
   },
+  alternates: {
+    canonical: 'https://shocoffeebar.ca',
+  },
 };
 
 export default function RootLayout({
