@@ -1,8 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
-
-import { siteConfig } from '@/config/site';
-import { FacebookIcon, InstagramIcon } from 'lucide-react';
 
 export function SiteFooter() {
   return (
@@ -68,7 +64,11 @@ export function SiteFooter() {
             Policy
           </Link>
           <div className="flex-row gap-x-2 font-[400] md:flex hidden">
-            <div className="bg-[#252525] flex items-center justify-center p-3 text-xl hover:bg-white group transition-all duration-300 ease-in">
+            <Link
+              href="https://www.instagram.com/s.o.pashchenko/"
+              target="_blank"
+              className="bg-[#252525] flex items-center justify-center p-3 text-xl hover:bg-white group transition-all duration-300 ease-in cursor-pointer"
+            >
               <span className="font-bold text-white group-hover:text-black transition-all duration-500  mr-4 group-hover:mr-2">
                 Designed
               </span>
@@ -76,8 +76,12 @@ export function SiteFooter() {
                 By
               </span>
               <span className="font-thin text-gray-500">Serhii Pashchenko</span>
-            </div>
-            <div className="bg-[#252525] flex items-center justify-center p-3 text-xl hover:bg-white group transition-all duration-300 ease-in">
+            </Link>
+            <Link
+              href="https://github.com/lowgy"
+              target="_blank"
+              className="bg-[#252525] flex items-center justify-center p-3 text-xl hover:bg-white group transition-all duration-300 ease-in cursor-pointer"
+            >
               <span className="font-bold text-white group-hover:text-black transition-all duration-500  mr-4 group-hover:mr-2">
                 Developed
               </span>
@@ -85,26 +89,34 @@ export function SiteFooter() {
                 By
               </span>
               <span className="font-thin text-gray-500">Logan Olson</span>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="flex-row justify-between font-[400] flex md:hidden mb-8">
-          <div className="bg-[#252525] flex flex-col items-center justify-center px-5 py-1 border-[#888888] border-[1px]">
+          <Link
+            href="https://www.instagram.com/s.o.pashchenko/"
+            target="_blank"
+            className="bg-[#252525] flex flex-col items-center justify-center px-5 py-1 border-[#888888] border-[1px] cursor-pointer"
+          >
             <p className="font-bold text-white text-[16px]">
               Designed <span className="font-bold text-gray-400 ml-2"> By</span>
             </p>
             <span className="font-thin sm:text-gray-500 text-[#888888]">
               Serhii Pashchenko
             </span>
-          </div>
-          <div className="bg-[#252525] flex flex-col items-center justify-center px-5 py-1 border-[#888888] border-[1px]">
+          </Link>
+          <Link
+            href="https://github.com/lowgy"
+            target="_blank"
+            className="bg-[#252525] flex flex-col items-center justify-center px-5 py-1 border-[#888888] border-[1px] cursor-pointer"
+          >
             <p className="font-bold text-white">
               Developed <span className="font-bold text-gray-400 ml-2">By</span>
             </p>
             <span className="font-thin text-[#888888] sm:text-gray-500">
               Logan Olson
             </span>
-          </div>
+          </Link>
         </div>
         <div className="flex items-center justify-center text-white font-medium text-[14px] md:text-lg">
           <h1>
