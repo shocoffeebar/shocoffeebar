@@ -126,21 +126,23 @@ export default function About() {
         </div>
         <div className="flex flex-col items-center justify-center gap-y-4">
           <div className="col-span-1 md:col-span-2 flex justify-start">
-            <Image
-              src="/denysb.jpg"
-              alt="John Doe"
-              width={330}
-              height={500}
-              className="shadow-xl shadow-black/25 hidden md:flex"
-            />
+            <div className="w-[330px] h-[469px] items-center relative hidden md:flex">
+              <Image
+                src="/denysb.jpg"
+                alt="John Doe"
+                fill={true}
+                className="shadow-xl shadow-black/25 hidden md:flex"
+              />
+            </div>
 
-            <Image
-              src="/denysb.jpg"
-              alt="John Doe"
-              width={192}
-              height={300}
-              className="shadow-xl shadow-black/25 md:hidden flex"
-            />
+            <div className="w-[192px] h-[268px] items-center relative md:hidden flex">
+              <Image
+                src="/denysb.jpg"
+                alt="John Doe"
+                fill={true}
+                className="shadow-xl shadow-black/25"
+              />
+            </div>
           </div>
           <h2 className="text-[18px] md:text-[28px] font-[300]">Denys</h2>
           <div className="flex flex-row gap-x-6 text-white">
