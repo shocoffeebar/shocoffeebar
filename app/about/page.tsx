@@ -24,7 +24,7 @@ export default function About() {
             objectPosition="center"
           />
         </div>
-        <div className="relative flex flex-col items-start z-20 md:my-auto md:ml-64 mt-32">
+        <div className="relative flex flex-col items-start z-20 md:my-auto md:ml-32 mt-32">
           <h1 className="text-[28px] md:text-[48px] text-shadow text-black font-[500] md:mx-0 ml-6">
             SHO ISN&apos;T JUST COFFEE
           </h1>
