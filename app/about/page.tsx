@@ -73,12 +73,12 @@ export default function About() {
           to experience SHO Coffee & Bar with us. Thank you
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 bg-white text-black items-center md:px-64 py-12 md:py-24 md:gap-y-12 gap-y-8">
-        <h1 className="col-span-2 md:col-span-3 text-center text-[20px] md:text-[36px] font-[500]">
+      <div className="grid grid-cols-2 md:grid-cols-6 bg-white text-black items-center md:px-64 py-12 md:py-24 md:gap-y-12 gap-y-8">
+        <h1 className="col-span-2 md:col-span-6 text-center text-[20px] md:text-[36px] font-[500]">
           Team
         </h1>
-        <div className="flex flex-col items-center justify-center  gap-y-4">
-          <div className="col-span-1 md:col-span-2 flex justify-start">
+        <div className="flex flex-col items-center justify-center gap-y-4 col-span-1 md:col-span-2 md:col-start-1">
+          <div className="flex justify-start">
             <Image
               src="/hryhoriia.jpg"
               alt="John Doe"
@@ -124,8 +124,8 @@ export default function About() {
             </svg>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center gap-y-4">
-          <div className="col-span-1 md:col-span-2 flex justify-start">
+        <div className="flex flex-col items-center justify-center gap-y-4 col-span-1 md:col-span-2 md:col-start-3">
+          <div className="flex justify-start">
             <div className="w-[330px] h-[469px] items-center relative hidden md:flex">
               <Image
                 src="/denysb.jpg"
@@ -172,8 +172,8 @@ export default function About() {
             </svg>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center  gap-y-4">
-          <div className="col-span-1 md:col-span-2 flex justify-start">
+        <div className="flex flex-col items-center justify-center col-span-1 md:col-span-2 md:col-start-5  gap-y-4">
+          <div className="flex justify-start">
             <Image
               src="/serhii.png"
               alt="John Doe"
@@ -219,7 +219,7 @@ export default function About() {
             </svg>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center col-span-1 md:col-start-2  gap-y-4">
+        <div className="flex flex-col items-center justify-center col-span-1 md:col-start-1 md:col-span-3  gap-y-4">
           <div className="flex justify-start">
             <Image
               src="/max.png"
@@ -260,6 +260,40 @@ export default function About() {
                 window.open(
                   'https://www.facebook.com/maxim.brichka?mibextid=ZbWKwL'
                 )
+              }
+            >
+              <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+            </svg>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center gap-y-4 col-span-2 md:col-span-3 md:col-start-4">
+          <div className="flex justify-start">
+            <Image
+              src="/oleksander.jpeg"
+              alt="John Doe"
+              width={330}
+              height={500}
+              className="shadow-xl shadow-black/25 hidden md:flex"
+            />
+
+            <Image
+              src="/oleksander.jpeg"
+              alt="John Doe"
+              width={192}
+              height={300}
+              className="shadow-xl shadow-black/25 md:hidden flex"
+            />
+          </div>
+          <h2 className="text-[18px] md:text-[28px] font-[300]">Oleksander</h2>
+
+          <div className="flex flex-row gap-x-6 text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#ffffff"
+              viewBox="0 0 448 512"
+              className="rounded-full p-2 bg-[#252525] hover:bg-[#888888] transition-all duration-200 ease-in cursor-pointer icon md:w-[50px] md:h-[50px] w-[40px] h-[40px]"
+              onClick={() =>
+                window.open('https://www.facebook.com/oleksandr.bohdan')
               }
             >
               <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
