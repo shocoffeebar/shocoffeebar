@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
-import multer from 'multer';
 
 export async function POST(req: NextRequest, res: NextResponse) {
   try {
@@ -10,13 +9,26 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
     // Create transporter for sending email
     const transport = nodemailer.createTransport({
-      host: 'shocoffeebar.ca',
+      host: 'mail.shocoffeebar.ca',
       port: 465,
       secure: true,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
+    });
+
+    await new Promise((resolve, reject) => {
+      // verify connection configuration
+      transport.verify(function (error, success) {
+        if (error) {
+          console.log(error);
+          reject(error);
+        } else {
+          console.log('Server is ready to take our messages');
+          resolve(success);
+        }
+      });
     });
 
     // Configure email options
