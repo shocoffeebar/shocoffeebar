@@ -32,7 +32,7 @@ export const ContactEmailTemplate = ({ name, type }: ContactEmailProps) => (
         <Text style={paragraph}>
           {type === 'Feedback'
             ? 'Thank you for your feedback! We appreciate all and any type of feedback!'
-            : type === 'Join Team'
+            : type === 'Join the Team'
             ? 'Thank you for your interest in joining our team. We will review your application and get back to you!'
             : 'We have received your contact request and will get back to you as soon as possible!'}
         </Text>
