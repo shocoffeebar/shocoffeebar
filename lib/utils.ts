@@ -15,7 +15,6 @@ export function sendEmail(data: ContactEmailProps) {
     body: JSON.stringify(data),
   })
     .then((response) => response.json())
-    .then((res) => console.log(res))
     .catch((error) => console.error(error));
 }
 
