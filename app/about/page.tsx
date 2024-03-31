@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import Image from 'next/image';
@@ -74,26 +75,22 @@ export default function About() {
           to experience SHO Coffee & Bar with us. Thank you
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-6 bg-white text-black items-center md:px-64 py-12 md:py-24 md:gap-y-12 gap-y-8">
+      <div className="grid grid-cols-2 md:grid-cols-6 bg-white text-black items-center lg:px-64 py-12 md:py-24 md:gap-y-12 gap-y-8">
         <h1 className="col-span-2 md:col-span-6 text-center text-[20px] md:text-[36px] font-[500]">
           Team
         </h1>
         <div className="flex flex-col items-center justify-center gap-y-4 col-span-1 md:col-span-2 md:col-start-1">
           <div className="flex justify-start">
-            <Image
+            <img
               src="/hryhoriia.jpg"
               alt="John Doe"
-              width={330}
-              height={500}
-              className="shadow-xl shadow-black/25 hidden md:flex"
+              className="shadow-xl shadow-black/25 hidden md:flex w-[315px] h-[449px]"
             />
 
-            <Image
+            <img
               src="/hryhoriia.jpg"
               alt="John Doe"
-              width={192}
-              height={300}
-              className="shadow-xl shadow-black/25 md:hidden flex"
+              className="shadow-xl shadow-black/25 md:hidden flex w-[192px] h-[300px]"
             />
           </div>
           <h2 className="text-[18px] md:text-[28px] font-[300]">Gregory</h2>
@@ -127,23 +124,17 @@ export default function About() {
         </div>
         <div className="flex flex-col items-center justify-center gap-y-4 col-span-1 md:col-span-2 md:col-start-3">
           <div className="flex justify-start">
-            <div className="w-[330px] h-[469px] items-center relative hidden lg:flex">
-              <Image
-                src="/denys.png"
-                alt="John Doe"
-                fill={true}
-                className="shadow-xl shadow-black/25 hidden md:flex"
-              />
-            </div>
+            <img
+              src="/denys.png"
+              alt="John Doe"
+              className="shadow-xl shadow-black/25 hidden md:flex w-[315px] h-[449px]"
+            />
 
-            <div className="w-[192px] h-[268px] items-center relative lg:hidden flex">
-              <Image
-                src="/denys.png"
-                alt="John Doe"
-                fill={true}
-                className="shadow-xl shadow-black/25"
-              />
-            </div>
+            <img
+              src="/denys.png"
+              alt="John Doe"
+              className="shadow-xl shadow-black/25 md:hidden flex w-[192px] h-[300px]"
+            />
           </div>
           <h2 className="text-[18px] md:text-[28px] font-[300]">Denys</h2>
           <div className="flex flex-row gap-x-6 text-white">
@@ -175,20 +166,16 @@ export default function About() {
         </div>
         <div className="flex flex-col items-center justify-center col-span-1 md:col-span-2 md:col-start-5  gap-y-4">
           <div className="flex justify-start">
-            <Image
+            <img
               src="/serhii.png"
               alt="John Doe"
-              width={330}
-              height={500}
-              className="shadow-xl shadow-black/25 hidden md:flex"
+              className="shadow-xl shadow-black/25 hidden md:flex w-[315px] h-[449px]"
             />
 
-            <Image
+            <img
               src="/serhii.png"
               alt="John Doe"
-              width={192}
-              height={300}
-              className="shadow-xl shadow-black/25 md:hidden flex"
+              className="shadow-xl shadow-black/25 md:hidden flex w-[192px] h-[300px]"
             />
           </div>
           <h2 className="text-[18px] md:text-[28px] font-[300]">Serhii</h2>
@@ -222,20 +209,16 @@ export default function About() {
         </div>
         <div className="flex flex-col items-center justify-center col-span-1 md:col-start-1 md:col-span-3  gap-y-4">
           <div className="flex justify-start">
-            <Image
+            <img
               src="/max.png"
               alt="John Doe"
-              width={330}
-              height={500}
-              className="shadow-xl shadow-black/25 hidden md:flex"
+              className="shadow-xl shadow-black/25 hidden md:flex w-[315px] h-[449px]"
             />
 
-            <Image
+            <img
               src="/max.png"
               alt="John Doe"
-              width={192}
-              height={300}
-              className="shadow-xl shadow-black/25 md:hidden flex"
+              className="shadow-xl shadow-black/25 md:hidden flex w-[192px] h-[300px]"
             />
           </div>
           <h2 className="text-[18px] md:text-[28px] font-[300]">Max</h2>
@@ -269,20 +252,16 @@ export default function About() {
         </div>
         <div className="flex flex-col items-center justify-center gap-y-4 col-span-2 md:col-span-3 md:col-start-4">
           <div className="flex justify-start">
-            <Image
+            <img
               src="/oleksander.png"
               alt="John Doe"
-              width={330}
-              height={500}
-              className="shadow-xl shadow-black/25 hidden md:flex"
+              className="shadow-xl shadow-black/25 hidden md:flex w-[315px] h-[449px]"
             />
 
-            <Image
+            <img
               src="/oleksander.png"
               alt="John Doe"
-              width={192}
-              height={300}
-              className="shadow-xl shadow-black/25 md:hidden flex"
+              className="shadow-xl shadow-black/25 md:hidden flex w-[192px] h-[300px]"
             />
           </div>
           <h2 className="text-[18px] md:text-[28px] font-[300]">Oleksander</h2>
