@@ -144,6 +144,7 @@ export function MainNav({ items }: MainNavProps) {
                 <Link
                   key={index}
                   href={item.href}
+                  target={item.title === 'Menu' ? '_blank' : ''}
                   className={cn(
                     'flex items-center text-xl font-bold text-white hover:text-[#888888] transition-all duration-300 ease-in hover:bg-[#252525] h-[70px] p-4',
                     item.disabled && 'cursor-not-allowed opacity-80'

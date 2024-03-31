@@ -1,13 +1,11 @@
 'use client';
 
-import { ImageSlider } from '@/components/image-slider';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-black text-white">
-      <div className="flex flex-col relative w-[100vw]  h-[600px]">
+      <div className="flex flex-col relative w-[100vw] h-[600px]">
         <div className="z-10 md:block hidden">
           <Image
             src="/home-hero.png"
@@ -19,12 +17,12 @@ export default function Home() {
         </div>
         <div className="z-10 md:hidden block">
           <Image
-            src="/coffee.png"
+            src="/mobile-home-hero.png"
             alt="Sho Coffee & Bar"
             layout="fill"
             objectFit="cover"
             objectPosition="center"
-            quality={100}
+            unoptimized={true}
           />
         </div>
         <div className="relative flex flex-col items-start z-20 md:my-auto md:ml-32 mt-32 ml-6">
@@ -57,7 +55,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="flex-row bg-white shadow-xl md:flex hidden">
+      <div className=" bg-white shadow-xl md:flex hidden">
         <Image
           src="/white-clean-coffee.jpg"
           alt="white-clean-coffee"
@@ -77,23 +75,7 @@ export default function Home() {
           style={{ width: '100%', height: '150px' }}
         />
       </div>
-      <div className="flex flex-col text-black bg-white md:px-24 md:py-16 leading-[36px] md:tracking-wide p-2 md:p-0">
-        <h2 className="text-[20px] md:text-[36px] md:p-2 font-[500]">
-          Is it opened?
-        </h2>
-        <p className="text-[18px] md:text-[32px] md:p-2 font-[300]">
-          Not yet. So get ready, coffee lovers! Our coffee shop will be opening
-          its doors in Spring 2024!
-        </p>
-        <p className="text-[18px] md:text-[32px] md:p-2 font-[300]">
-          Also exiciting news! Our bar will also be joining the lineup soon.
-          Stay tuned for updates!
-        </p>
-        <p className="text-[18px] md:text-[32px] md:p-2 font-[300]">
-          Follow us on socials to stay tuned!
-        </p>
-      </div>
-      <div className="flex flex-col pb-12 md:px-[100px] bg-white text-black">
+      <div className="flex flex-col py-12 md:px-[100px] bg-white text-black">
         <h1 className="text-[20px] md:text-[36px] p-2 md:p-0 font-[500] md:pb-6">
           You will find us here
         </h1>

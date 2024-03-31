@@ -17,11 +17,12 @@ export default function About() {
         </div>
         <div className="z-10 md:hidden flex">
           <Image
-            src="/white-cup-black-lid-white-bg-front-wide.jpg"
+            src="/mobile-about-hero.png"
             alt="Sho Coffee & Bar"
             layout="fill"
             objectFit="cover"
             objectPosition="center"
+            unoptimized={true}
           />
         </div>
         <div className="relative flex flex-col items-start z-20 md:my-auto md:ml-32 mt-32">
@@ -126,18 +127,18 @@ export default function About() {
         </div>
         <div className="flex flex-col items-center justify-center gap-y-4 col-span-1 md:col-span-2 md:col-start-3">
           <div className="flex justify-start">
-            <div className="w-[330px] h-[469px] items-center relative hidden md:flex">
+            <div className="w-[330px] h-[469px] items-center relative hidden lg:flex">
               <Image
-                src="/denysb.jpg"
+                src="/denys.png"
                 alt="John Doe"
                 fill={true}
                 className="shadow-xl shadow-black/25 hidden md:flex"
               />
             </div>
 
-            <div className="w-[192px] h-[268px] items-center relative md:hidden flex">
+            <div className="w-[192px] h-[268px] items-center relative lg:hidden flex">
               <Image
-                src="/denysb.jpg"
+                src="/denys.png"
                 alt="John Doe"
                 fill={true}
                 className="shadow-xl shadow-black/25"
@@ -269,7 +270,7 @@ export default function About() {
         <div className="flex flex-col items-center justify-center gap-y-4 col-span-2 md:col-span-3 md:col-start-4">
           <div className="flex justify-start">
             <Image
-              src="/oleksander.jpeg"
+              src="/oleksander.png"
               alt="John Doe"
               width={330}
               height={500}
@@ -277,7 +278,7 @@ export default function About() {
             />
 
             <Image
-              src="/oleksander.jpeg"
+              src="/oleksander.png"
               alt="John Doe"
               width={192}
               height={300}
