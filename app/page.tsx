@@ -22,6 +22,7 @@ export default function Home() {
             layout="fill"
             objectFit="cover"
             objectPosition="center"
+            priority={true}
           />
         </div>
         <div className="relative flex flex-col items-start z-20 md:my-auto md:ml-32 mt-32 ml-6">
