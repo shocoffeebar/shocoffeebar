@@ -1,6 +1,6 @@
 export default function Policy() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#252525] text-white lg:px-72 py-12">
+    <main className="flex min-h-screen flex-col bg-[#252525] text-white px-8 lg:px-72 py-12">
       <div className="flex flex-col gap-[30px]">
         <h1 className="font-[500] text-[28px] md:text-[48px]">
           COMPANY POLICY

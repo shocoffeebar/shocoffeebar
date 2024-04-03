@@ -34,7 +34,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col md:px-24 md:py-12 tracking-wide">
+      <div className="flex flex-col md:px-24 px-4 md:py-12 tracking-wide">
         <div className="flex flex-col py-8">
           <h2 className="text-[20px] md:text-[42px] font-[500] p-2">
             Briefly about Sho
@@ -55,7 +55,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className=" bg-white shadow-xl md:flex hidden">
+      <div className="bg-white shadow-xl md:flex hidden">
         <Image
           src="/white-clean-coffee.jpg"
           alt="white-clean-coffee"
@@ -76,7 +76,7 @@ export default function Home() {
         />
       </div>
       <div className="flex flex-col py-12 md:px-[100px] bg-white text-black">
-        <h1 className="text-[20px] md:text-[36px] p-2 md:p-0 font-[500] md:pb-6">
+        <h1 className="text-[20px] md:text-[36px] px-6 p-2 md:p-0 font-[500] md:pb-6">
           You will find us here
         </h1>
         <iframe

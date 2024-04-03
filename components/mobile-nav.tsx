@@ -17,11 +17,11 @@ export function MobileNav({ items }: MainNavProps) {
 
   return (
     //Hambuger menu
-    <div className="container flex-row justify-between flex md:hidden mt-4">
+    <div className="container flex-row justify-between items-center flex md:hidden py-4">
       <Link href="/">
         <svg
-          width="100"
-          height="40"
+          width="70"
+          height="30"
           viewBox="0 0 1830 780"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +157,7 @@ export function MobileNav({ items }: MainNavProps) {
       </button>
       {items?.length
         ? isOpen && (
-            <div className="bg-[#101010] h-screen w-screen absolute top-[4.5rem] group-focus:top-0 right-0 duration-150 flex flex-col space-y-8 pt-8 pb-12 items-center text-center">
+            <div className="bg-[#101010] h-screen w-screen absolute top-[3.5rem] group-focus:top-0 right-0 duration-150 flex flex-col space-y-8 pt-8 pb-12 items-center text-center">
               {items?.map(
                 (item, index) =>
                   item.href && (
