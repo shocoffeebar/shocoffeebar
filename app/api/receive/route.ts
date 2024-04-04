@@ -9,8 +9,8 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
     // Create transporter for sending email
     const transport = nodemailer.createTransport({
-      host: 'mail.shocoffeebar.ca',
-      port: 465,
+      service: 'gmail',
+      host: 'smtp.gmail.com',
       secure: true,
       auth: {
         user: process.env.EMAIL_USER,
