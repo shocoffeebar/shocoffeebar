@@ -200,7 +200,7 @@ export default function Contact() {
     <main className="flex min-h-screen flex-col bg-black text-white">
       <ContactForm />
       <div className="flex flex-col py-[30px] md:py-[100px] md:px-[100px] bg-black text-white">
-        <h1 className="text-[20px] md:text-[36px] font-[500] ml-4 md:ml-0">
+        <h1 className="text-[20px] md:text-[36px] font-[500] ml-4 md:ml-0 md:pb-6 pb-4">
           You will find us here
         </h1>
         <iframe

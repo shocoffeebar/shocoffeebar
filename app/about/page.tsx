@@ -32,7 +32,7 @@ export default function About() {
           </h1>
         </div>
       </div>
-      <div className="flex flex-col md:px-24 md:py-16 py-8">
+      <div className="flex flex-col md:px-24 px-4 md:py-16 py-8">
         <h2 className="text-[20px] md:text-[36px] p-2 font-[500]">
           What is SHO?
         </h2>
