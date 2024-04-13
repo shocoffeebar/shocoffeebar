@@ -40,18 +40,7 @@ export default function Home() {
             Briefly about Sho
           </h2>
           <p className="text-[16px] md:text-[28px] font-[300] md:leading-[40px] p-2">
-            At our core, we prioritize understanding our clients needs above all
-            else. That&apos;s why we&apos;ve woven the essence of inquiry into
-            our brand. You might be curious about the significance of
-            &quot;Sho&quot; in our name. If you guessed it represents the
-            question &quot;what,&quot; you&apos;re absolutely correct! In our
-            logo, &quot;Sho&quot; embodies that sense of wonder. Now, you might
-            be wondering about the language behind our playful puzzle. Simply
-            put, &quot;Sho?&quot; is a friendly nod to Ukrainian slang for
-            &quot;
-            <span className="text-[#E4664F]">what</span>&quot; (translated as
-            &quot;Шо&quot;). So, <span className="text-[#E4664F]">sho</span>{' '}
-            will it be today? A comforting latte or a frothy cappuccino?
+          Introducing SHO Coffee & Bar, where every sip and bite is an invitation to a world of unparalleled experiences. At the heart of our philosophy lies an unwavering commitment to understanding our guests' desires. We blend innovation with expertise to craft one-of-a-kind encounters, spanning from the aroma of freshly brewed coffee to the allure of European tapas. SHO transcends the ordinary, drawing inspiration from diverse global influences, from upscale venues to renowned establishments.
           </p>
         </div>
       </div>
