@@ -40,7 +40,7 @@ export default function Home() {
             Briefly about Sho
           </h2>
           <p className="text-[16px] md:text-[28px] font-[300] md:leading-[40px] p-2">
-          Introducing SHO Coffee & Bar, where every sip and bite is an invitation to a world of unparalleled experiences. At the heart of our philosophy lies an unwavering commitment to understanding our guests' desires. We blend innovation with expertise to craft one-of-a-kind encounters, spanning from the aroma of freshly brewed coffee to the allure of European tapas. SHO transcends the ordinary, drawing inspiration from diverse global influences, from upscale venues to renowned establishments.
+          Introducing SHO Coffee & Bar, where every sip and bite is an invitation to a world of unparalleled experiences. At the heart of our philosophy lies an unwavering commitment to understanding our guests&apos; desires. We blend innovation with expertise to craft one-of-a-kind encounters, spanning from the aroma of freshly brewed coffee to the allure of European tapas. SHO transcends the ordinary, drawing inspiration from diverse global influences, from upscale venues to renowned establishments.
           </p>
         </div>
       </div>
