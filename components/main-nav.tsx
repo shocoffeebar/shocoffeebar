@@ -137,7 +137,7 @@ export function MainNav({ items }: MainNavProps) {
         </svg>
       </Link>
       {items?.length ? (
-        <nav className="list-none sm:flex hidden justify-center items-center flex-1 lg:gap-32">
+        <nav className="list-none sm:flex hidden justify-center items-center flex-1 lg:gap-[5%]">
           {items?.map(
             (item, index) =>
               item.href && (
