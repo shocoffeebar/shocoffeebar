@@ -1,10 +1,14 @@
+import { externalLinks } from './config/external-links.mjs';
+
 /** @type {import('next').NextConfig} */
+
+
 const nextConfig = {
     async redirects() {
         return [
           {
             source: '/menu',
-            destination: 'https://utfs.io/f/83b6086e-f498-4a0f-9024-8413de091645-a0646z.pdf',
+            destination: externalLinks.menuLink,
             permanent: false,
             basePath: false
           },
@@ -12,4 +16,4 @@ const nextConfig = {
       },
 }
 
-module.exports = nextConfig
+export default nextConfig

@@ -1,3 +1,5 @@
+import { externalLinks } from './external-links.mjs';
+
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
@@ -10,7 +12,7 @@ export const siteConfig = {
     },
     {
       title: 'Menu',
-      href: 'https://utfs.io/f/83b6086e-f498-4a0f-9024-8413de091645-a0646z.pdf',
+      href: externalLinks.menuLink,
     },
     {
       title: 'Contact',
