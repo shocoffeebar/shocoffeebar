@@ -10,7 +10,7 @@ export const siteConfig = {
     },
     {
       title: 'Menu',
-      href: 'https://utfs.io/f/7fd3bfd1-bcbb-451b-bd4c-d0156f8832ee-nfe84.pdf',
+      href: 'https://utfs.io/f/83b6086e-f498-4a0f-9024-8413de091645-a0646z.pdf',
     },
     {
       title: 'Contact',
