@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function About() {
   return (
     <main className="flex min-h-screen flex-col bg-black text-white">
-      <div className="flex flex-col relative w-[100vw] h-[600px]">
+      <div className="flex flex-col relative w-[100vw] h-[600px] max-w-full">
         <div className="z-10 md:flex hidden">
           <Image
             src="/about-hero.png"

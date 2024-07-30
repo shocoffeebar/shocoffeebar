@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-black text-white">
-      <div className="flex flex-col relative w-[100vw] h-[600px]">
+      <div className="flex flex-col relative w-[100vw] h-[600px] max-w-full">
         <div className="z-10 md:block hidden">
           <Image
             src="/home-hero.png"
@@ -51,7 +51,7 @@ export default function Home() {
           width={0}
           height={0}
           sizes="100vw"
-          style={{ width: '100%', height: '600px' }}
+          style={{ width: '100%' }}
         />
       </div>
       <div className="flex-row bg-white shadow-xl md:hidden flex">
@@ -61,7 +61,7 @@ export default function Home() {
           width={0}
           height={0}
           sizes="100vw"
-          style={{ width: '100%', height: '150px' }}
+          style={{ width: '100%' }}
         />
       </div>
       <div className="flex flex-col py-12 md:px-[100px] bg-white text-black">
