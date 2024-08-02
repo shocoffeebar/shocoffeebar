@@ -1,8 +1,5 @@
 'use client';
 
-import { ImageSlider } from '@/components/image-slider';
-import Link from 'next/link';
-
 export default function Menu() {
   return (
     <main className="flex flex-col bg-black text-white">
