@@ -15,6 +15,10 @@ export const siteConfig = {
       href: externalLinks.menuLink,
     },
     {
+      title: 'Blog',
+      href: '/blog'
+    },
+    {
       title: 'Contact',
       href: '/contact',
     },
@@ -25,6 +29,6 @@ export const siteConfig = {
     {
       title: 'Join The Team',
       href: '/join',
-    },
+    }
   ],
 };
