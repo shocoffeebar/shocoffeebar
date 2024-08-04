@@ -1,5 +1,5 @@
 import { posts } from "@/posts/posts";
-import Post from "./[title]/page";
+import Post from "./[title]/post";
 
 export default function Blog() {
   return (
