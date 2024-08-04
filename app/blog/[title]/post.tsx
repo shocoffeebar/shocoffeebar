@@ -2,14 +2,8 @@ import { posts } from "@/posts/posts";
 import { IPost } from "@/types/post";
 import { redirect } from "next/navigation";
 
-export default function Post({ params, post }: { params: { title: string }, post?: IPost }) {
-  let isShort = !params.title.length;
-  if (!post) {
-    post = posts.find(post => post.title === decodeURIComponent(params.title));
-    if (!post) {
-      return redirect('/404');
-    }
-  }
+export default function Post({ post }: { post: IPost }) {
+  let isShort = !post.title.length;
   return (
     <div className="flex flex-col w-full items-center">
       <div className={`flex flex-col w-full max-w-full max-w-screen-xl md:pb-16 md:px-24 px-4 pb-8`}>
