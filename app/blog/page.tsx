@@ -8,7 +8,7 @@ export default function Blog() {
         posts.map((post, index) => {
           if (!post) return;
           return (
-            <Post params={{title: ''}} post={post} key={index}></Post>
+            <Post params={{title: post.title}} post={post} key={index}></Post>
           )
         })
       }
