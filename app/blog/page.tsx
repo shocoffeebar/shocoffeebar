@@ -1,5 +1,5 @@
+import Post from "@/components/post";
 import { posts } from "@/posts/posts";
-import Post from "./[title]/post";
 
 export default function Blog() {
   return (
@@ -8,7 +8,7 @@ export default function Blog() {
         posts.map((post, index) => {
           if (!post) return;
           return (
-            <Post params={{title: post.title}} post={post} key={index}></Post>
+            <Post post={post} isShort={true} key={index}></Post>
           )
         })
       }
