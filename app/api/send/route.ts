@@ -1,3 +1,5 @@
+'use client';
+
 import { ContactEmailTemplate } from '@/components/contact-template';
 import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
