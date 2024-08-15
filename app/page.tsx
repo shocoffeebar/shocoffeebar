@@ -1,31 +1,64 @@
 'use client';
 
 import Image from 'next/image';
+import { useState, MouseEvent } from 'react';
 
 export default function Home() {
+  const [translate, setTranslate] = useState(0);
+  let [screenWidth, setScreenWidth] = useState(0);
+  let [imgWidth, setImgWidth] = useState(0);
+  
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    if (!screenWidth || ! imgWidth) {
+      setScreenWidth(e.currentTarget.offsetWidth);
+      screenWidth = e.currentTarget.offsetWidth;
+      
+      setImgWidth(e.currentTarget.children[0].scrollWidth);
+      imgWidth = e.currentTarget.children[0].scrollWidth;
+    }
+    if (screenWidth > imgWidth) return;
+    const mouseX = e.clientX;
+    const mouseFromCenter = mouseX - screenWidth / 2;
+    if (Math.abs(mouseFromCenter) < screenWidth /2 * 0.3) return setTranslate(0);
+    let translate = (imgWidth - screenWidth) / 2;
+    if (!(mouseX < screenWidth / 2)) translate = translate * -1;
+    setTranslate(translate);
+  }
+
+  const handleMouseLeave = () => {
+    setTranslate(0);
+  }
+
   return (
     <main className="flex min-h-screen flex-col bg-black text-white">
-      <div className="flex flex-col relative w-[100vw] h-[600px] max-w-full">
-        <div className="z-10 md:block hidden">
+      <div className="flex flex-col items-center relative md:h-[600px] 2xl:h-[900px] w-[100vw] max-w-full overflow-hidden" 
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}>
+        <div className="md:block hidden relative h-full aspect-[2880/900] transition-transform duration-1000 ease-[linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%)]"
+          style={{
+            transform: `translateX(${translate}px)`,
+          }}
+        >
           <Image
             src="/home-hero.png"
             alt="Sho Coffee & Bar"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
+            className="object-cover object-center w-full h-auto"
+            sizes="100vw"
+            fill
+            priority
           />
         </div>
-        <div className="z-10 md:hidden block">
+        <div className="z-10 md:hidden block relative">
           <Image
             src="/mobile-home-hero.png"
             alt="Sho Coffee & Bar"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="center"
+            className="object-cover object-center w-full h-auto"
+            sizes="100vw"
+            fill
             priority={true}
           />
         </div>
-        <div className="relative flex flex-col items-start z-20 md:my-auto md:ml-32 mt-32 ml-6">
+        <div className="flex flex-col items-start z-20 md:my-auto md:ml-32 mt-32 ml-6  absolute left-0 inset-y-0 top-2 justify-center">
           <h1 className="text-[28px] md:text-[48px] font-[500] text-shadow mb-2">
             SHO COFFEE & BAR
           </h1>
