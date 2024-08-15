@@ -7,22 +7,47 @@ export default function Home() {
   const [translate, setTranslate] = useState(0);
   let [screenWidth, setScreenWidth] = useState(0);
   let [imgWidth, setImgWidth] = useState(0);
+  // console.log('started')
   
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-    if (!screenWidth || ! imgWidth) {
-      setScreenWidth(e.currentTarget.offsetWidth);
-      screenWidth = e.currentTarget.offsetWidth;
-      
-      setImgWidth(e.currentTarget.children[0].scrollWidth);
-      imgWidth = e.currentTarget.children[0].scrollWidth;
-    }
+    initValues();
     if (screenWidth > imgWidth) return;
-    const mouseX = e.clientX;
-    const mouseFromCenter = mouseX - screenWidth / 2;
-    if (Math.abs(mouseFromCenter) < screenWidth /2 * 0.3) return setTranslate(0);
-    let translate = (imgWidth - screenWidth) / 2;
-    if (!(mouseX < screenWidth / 2)) translate = translate * -1;
-    setTranslate(translate);
+    
+    const mouseFromCenter = e.clientX - screenWidth / 2
+    
+    if (mouseCloserThanDecimalPercents(0.3)) {
+      return toCenter();
+    }
+
+    let newTranslate = (screenWidth - imgWidth) / 2;
+    if (mouseFromCenter < 0) newTranslate *= -1;
+    
+    if (newTranslate !== translate) {
+      console.log('setTranslate(translate);')
+      setTranslate(newTranslate);
+    }
+
+    function initValues() {
+      if (!screenWidth) {
+        setScreenWidth(e.currentTarget.offsetWidth);
+        screenWidth = e.currentTarget.offsetWidth;
+      }
+      if (!imgWidth) {
+        setImgWidth(e.currentTarget.children[0].scrollWidth);
+        imgWidth = e.currentTarget.children[0].scrollWidth;
+      }
+      
+    }
+
+    function mouseCloserThanDecimalPercents(percents: number) {
+      return Math.abs(mouseFromCenter) < screenWidth / 2 * percents;
+    }
+
+    function toCenter() {
+      if (!translate) return;
+      console.log('setTranslate(0);')
+      return setTranslate(0);
+    }
   }
 
   const handleMouseLeave = () => {
