@@ -1,3 +1,3 @@
 export const externalLinks = {
-  menuLink: 'https://utfs.io/f/e98cd803-1edb-402e-985c-5b105e67547b-4ronu3.pdf'
+  menuLink: 'https://utfs.io/f/gOOgxymKkZ4q2rg1mKBHsqTzw8IC60eBYSWDu5agpPf7tF4R'
 }
